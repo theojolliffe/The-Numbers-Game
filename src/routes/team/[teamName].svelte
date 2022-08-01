@@ -2,7 +2,7 @@
 	import Header from '$lib/header/Header.svelte';
     import {page} from '$app/stores'
 	import { teams } from '../fb-utils'
-    // import StackedBar from '/src/charts/stacked-bar/src/StackedBar.svelte';
+    import StackedBar from '/src/charts/stacked-bar/src/StackedBar.svelte';
     import * as someChartJSON from '/src/charts/stacked-bar/src/passing.json';
 
     let misc = someChartJSON.default.misc
