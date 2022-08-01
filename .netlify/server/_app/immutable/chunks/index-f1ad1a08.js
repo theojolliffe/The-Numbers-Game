@@ -17,13 +17,27 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
+  a: () => subscribe,
+  b: () => each,
   c: () => create_ssr_component,
+  d: () => add_attribute,
   e: () => escape,
+  f: () => safe_not_equal,
+  g: () => getContext,
+  h: () => set_store_value,
+  i: () => is_function,
+  j: () => add_styles,
+  k: () => compute_rest_props,
+  l: () => null_to_empty,
   m: () => missing_component,
+  n: () => noop,
+  r: () => run_all,
   s: () => setContext,
   v: () => validate_component
 });
 module.exports = __toCommonJS(stdin_exports);
+function noop() {
+}
 function run(fn) {
   return fn();
 }
@@ -32,6 +46,34 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function is_function(thing) {
+  return typeof thing === "function";
+}
+function safe_not_equal(a, b) {
+  return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
+}
+function subscribe(store, ...callbacks) {
+  if (store == null) {
+    return noop;
+  }
+  const unsub = store.subscribe(...callbacks);
+  return unsub.unsubscribe ? () => unsub.unsubscribe() : unsub;
+}
+function compute_rest_props(props, keys) {
+  const rest = {};
+  keys = new Set(keys);
+  for (const k in props)
+    if (!keys.has(k) && k[0] !== "$")
+      rest[k] = props[k];
+  return rest;
+}
+function null_to_empty(value) {
+  return value == null ? "" : value;
+}
+function set_store_value(store, ret, value) {
+  store.set(value);
+  return ret;
 }
 let current_component;
 function set_current_component(component) {
@@ -45,6 +87,9 @@ function get_current_component() {
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
   return context;
+}
+function getContext(key) {
+  return get_current_component().$$.context.get(key);
 }
 Promise.resolve();
 const ATTR_REGEX = /[&"]/g;
@@ -62,6 +107,13 @@ function escape(value, is_attr = false) {
     last = i + 1;
   }
   return escaped + str.substring(last);
+}
+function each(items, fn) {
+  let str = "";
+  for (let i = 0; i < items.length; i += 1) {
+    str += fn(items[i], i);
+  }
+  return str;
 }
 const missing_component = {
   $$render: () => ""
@@ -108,4 +160,17 @@ function create_ssr_component(fn) {
     },
     $$render
   };
+}
+function add_attribute(name, value, boolean) {
+  if (value == null || boolean && !value)
+    return "";
+  const assignment = boolean && value === true ? "" : `="${escape(value, true)}"`;
+  return ` ${name}${assignment}`;
+}
+function style_object_to_string(style_object) {
+  return Object.keys(style_object).filter((key) => style_object[key]).map((key) => `${key}: ${style_object[key]};`).join(" ");
+}
+function add_styles(style_object) {
+  const styles = style_object_to_string(style_object);
+  return styles ? ` style="${styles}"` : "";
 }

@@ -30,8 +30,8 @@ __export(stdin_exports, {
   stylesheets: () => stylesheets
 });
 module.exports = __toCommonJS(stdin_exports);
-var module2 = __toESM(require("../entries/fallbacks/error.svelte.js"));
-const index = 1;
-const file = "_app/immutable/error.svelte-d20af53e.js";
-const imports = ["_app/immutable/error.svelte-d20af53e.js", "_app/immutable/chunks/index-b88214a7.js"];
-const stylesheets = [];
+var module2 = __toESM(require("../entries/pages/team/_teamName_.svelte.js"));
+const index = 3;
+const file = "_app/immutable/pages/team/_teamName_.svelte-4ab0864d.js";
+const imports = ["_app/immutable/pages/team/_teamName_.svelte-4ab0864d.js", "_app/immutable/chunks/index-b88214a7.js", "_app/immutable/chunks/tweets-42fa5a60.js", "_app/immutable/chunks/index-0d39dbd8.js"];
+const stylesheets = ["_app/immutable/assets/[teamName]-db6d7e80.css", "_app/immutable/assets/tweets-b0cf04de.css"];
