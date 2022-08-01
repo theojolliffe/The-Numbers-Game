@@ -2,7 +2,7 @@
 	import Header from '$lib/header/Header.svelte';
     import {page} from '$app/stores'
 	import { teams } from '../fb-utils'
-    import StackedBar from '/src/charts/stacked-bar/src/StackedBar.svelte';
+    // import StackedBar from '/src/charts/stacked-bar/src/StackedBar.svelte';
     import * as someChartJSON from '/src/charts/stacked-bar/src/passing.json';
 
     let misc = someChartJSON.default.misc
@@ -64,9 +64,9 @@
                     {#if text.includes('.png')}
                         <div class="chart" id="chartpng">
                             <h2 class="chart-title">Successful passes by pass distance</h2>
-                            <div class="chart-cont">
+                            <!-- <div class="chart-cont">
                                 <StackedBar />
-                            </div>
+                            </div> -->
                         </div>
                     {:else}
                     <span class="tweets" on:click={toggle(id)}>{text}</span>
