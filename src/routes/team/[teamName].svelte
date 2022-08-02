@@ -28,6 +28,7 @@
     });
 	$: console.log(teamName, data.find(e => e.misc.team == teamName))
 
+    $: console.log('tweets', tweets)
     let expanded;
     function toggle(id) {
         if (expanded==id) {
@@ -40,6 +41,65 @@
     const url = 'https://twitter.com/LeicesterTng/status/1485011327630417928';
 	const title = 'Svelte Share Buttons Component';
 	const desc = 'Svelte based social media share buttons component with no tracking.';
+
+
+    import Chart from 'chart.js/auto';
+    import { onMount } from 'svelte';
+
+	let chartCanvas;
+
+    const chartdata = {
+    labels: ["Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington"],
+    datasets: [
+        {
+        label: 'Short',
+        data: [2, 4, 6, 8, 10, 12, 14],
+        backgroundColor: 'rgb(131, 219, 215)',
+        },
+        {
+        label: 'Medium',
+        data: [2, 4, 6, 8, 10, 12, 14],
+        backgroundColor: 'rgb(47, 126, 159)',
+        },
+        {
+        label: 'Long',
+        data: [2, 4, 6, 8, 10, 12, 14],
+        backgroundColor: 'rgb(229, 120, 115)',
+        }
+    ]
+    };
+
+	onMount(async (promise) => {
+		let ctx = chartCanvas.getContext('2d');
+		var chart = new Chart(ctx, {
+                type: 'bar',
+                data: chartdata,
+                options: {
+                    indexAxis: 'y',
+                    plugins: {
+                    title: {
+                        display: true,
+                        text: 'Successful passes by pass distance',
+                        font: {
+                            family: 'Helvetica Neue',
+                            size: 24
+                        }
+                    },
+                    },
+                    responsive: true,
+                    aspectRatio: 1.5,
+                    borderRadius: 3,
+                    scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true
+                    }
+                    }
+                }
+            });
+	});
 
 </script>
 
@@ -56,16 +116,18 @@
 	<div id="text-top"></div>
 	<div id="tweet-cont" style="width: 640px; margin:0 auto;">
 		{#each tweets as { id, text }, i}
-			<!-- <div>
-				<a class="tweets" href={"https://twitter.com/_Numbers_Game/status/"+id} target="_blank">{text}</a>
-			</div> -->
             <div class={(expanded==id)?"selectedtweet":"unselectedtweet"}>
                 <div>
                     {#if text.includes('.png')}
-                        <div class="chart" id="chartpng">
+                        <!-- <div class="chart" id="chartpng" style="height: 400px">
                             <h2 class="chart-title">Successful passes by pass distance</h2>
                             <div class="chart-cont">
                                 <StackedBar />
+                            </div>
+                        </div> -->
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={chartCanvas} id="myChart"></canvas>
                             </div>
                         </div>
                     {:else}
@@ -113,7 +175,7 @@
 	}
 	.chart {
         width: 100%;
-        height: 380px;
+        /* height: 380px; */
         margin-top: 40px;
         margin-bottom: 50px;
 	}
