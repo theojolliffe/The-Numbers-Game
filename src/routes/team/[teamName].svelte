@@ -3,7 +3,7 @@
     import {page} from '$app/stores'
 	import { teams } from '../fb-utils'
     import StackedBar from '$lib/charts/stacked-bar/src/StackedBar.svelte';
-    import * as someChartJSON from '$lib/charts/stacked-bar/src/passing.json';
+    import * as someChartJSON from '/Users/theojolliffe/Documents/The Numbers Game/data-processing/Teams/Manchester City/2022-05-22/chart_data/passing.json';
 
     let misc = someChartJSON.default.misc
 	console.log('misc', misc)
@@ -73,7 +73,7 @@
 		let ctx = chartCanvas.getContext('2d');
 		var chart = new Chart(ctx, {
                 type: 'bar',
-                data: chartdata,
+                data: someChartJSON.default.data,
                 options: {
                     indexAxis: 'y',
                     plugins: {
