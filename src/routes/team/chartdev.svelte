@@ -1,10 +1,10 @@
  <script>
 	import Header from '$lib/header/Header.svelte';
-	import { teams } from '../fb-utils'
-    import * as someChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/passing.json';
-    import * as progdistChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/progdist.json';
-    import * as xGChart from '$lib/Teams/Manchester City/Timeseries/Expected_npxG.json';
-    import * as someJSON from '../twitterThreads.json';
+	// import { teams } from '../fb-utils'
+    // import * as someChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/passing.json';
+    // import * as progdistChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/progdist.json';
+    // import * as xGChart from '$lib/Teams/Manchester City/Timeseries/Expected_npxG.json';
+    // import * as someJSON from '../twitterThreads.json';
 
 //     let misc = someChartJSON.default.misc
 // 	console.log('misc', misc)
