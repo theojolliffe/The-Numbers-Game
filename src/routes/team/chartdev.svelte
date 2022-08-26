@@ -1,4 +1,4 @@
-<script>
+<!-- <script>
 	import Header from '$lib/header/Header.svelte';
 	import { teams } from '../fb-utils'
     import * as someChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/passing.json';
@@ -203,7 +203,7 @@
 
 	</div>
 </body>
-
+ -->
 <style>
     .chart-title {
 		text-align: center;
