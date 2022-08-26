@@ -1,4 +1,4 @@
-<!-- <script>
+ <script>
 	import Header from '$lib/header/Header.svelte';
 	import { teams } from '../fb-utils'
     import * as someChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/passing.json';
@@ -6,204 +6,204 @@
     import * as xGChart from '$lib/Teams/Manchester City/Timeseries/Expected_npxG.json';
     import * as someJSON from '../twitterThreads.json';
 
-    let misc = someChartJSON.default.misc
-	console.log('misc', misc)
+//     let misc = someChartJSON.default.misc
+// 	console.log('misc', misc)
 
-    let data = someJSON.default
-    data = Object.keys(data).map(e => {
-        return data[e]
-    })
+//     let data = someJSON.default
+//     data = Object.keys(data).map(e => {
+//         return data[e]
+//     })
 
-    $: teamName_date = "man-city#2022-08-20"
-    $: teamName = teamName_date.split("#")[0]
-    $: teamName = teams.find(d => d.id==teamName).name
+//     $: teamName_date = "man-city#2022-08-20"
+//     $: teamName = teamName_date.split("#")[0]
+//     $: teamName = teams.find(d => d.id==teamName).name
 
-    $: tweets = data.find(e => e.misc.team == teamName).data
-	$: tweets = tweets.sort(function(a, b){
-        return parseInt(a['id']) - parseInt(b['id'])
-    });
+//     $: tweets = data.find(e => e.misc.team == teamName).data
+// 	$: tweets = tweets.sort(function(a, b){
+//         return parseInt(a['id']) - parseInt(b['id'])
+//     });
 
-    import Chart from 'chart.js/auto';
-    import annotationPlugin from 'chartjs-plugin-annotation';
-    Chart.register(annotationPlugin);
-    import { onMount } from 'svelte';
+//     import Chart from 'chart.js/auto';
+//     import annotationPlugin from 'chartjs-plugin-annotation';
+//     Chart.register(annotationPlugin);
+//     import { onMount } from 'svelte';
 
-	let chartStackedBar;
-    let chartScatter;
-    let chartLine;
+// 	let chartStackedBar;
+//     let chartScatter;
+//     let chartLine;
 
-    const chartdata = {
-    labels: ["Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington"],
-    datasets: [
-        {
-        label: 'Short',
-        data: [2, 4, 6, 8, 10, 12, 14],
-        backgroundColor: 'rgb(131, 219, 215)',
-        },
-        {
-        label: 'Medium',
-        data: [2, 4, 6, 8, 10, 12, 14],
-        backgroundColor: 'rgb(47, 126, 159)',
-        },
-        {
-        label: 'Long',
-        data: [2, 4, 6, 8, 10, 12, 14],
-        backgroundColor: 'rgb(229, 120, 115)',
-        }
-    ]
-    };
+//     const chartdata = {
+//     labels: ["Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington", "Longname longington"],
+//     datasets: [
+//         {
+//         label: 'Short',
+//         data: [2, 4, 6, 8, 10, 12, 14],
+//         backgroundColor: 'rgb(131, 219, 215)',
+//         },
+//         {
+//         label: 'Medium',
+//         data: [2, 4, 6, 8, 10, 12, 14],
+//         backgroundColor: 'rgb(47, 126, 159)',
+//         },
+//         {
+//         label: 'Long',
+//         data: [2, 4, 6, 8, 10, 12, 14],
+//         backgroundColor: 'rgb(229, 120, 115)',
+//         }
+//     ]
+//     };
 
-    console.log('progdistChartJSON', progdistChartJSON.default)
-
-
-	onMount(async (promise) => {
-        // Stacked Bar
-        // In order to determine whether to create chart, we loop through our tweets asking; 'if it is false that all elements do not include the passing.png indicator' 
-        if (!tweets.every( (e) => { return !e.text.includes('passing.png') })) {
-            let ctx = chartStackedBar.getContext('2d');
-            var chart = new Chart(ctx, {
-                    type: 'bar',
-                    data: someChartJSON.default.data,
-                    options: {
-                        indexAxis: 'y',
-                        plugins: {
-                        title: {
-                            display: true,
-                            text: 'Successful passes by pass distance',
-                            font: {
-                                family: 'Helvetica Neue',
-                                size: 24
-                            }
-                        },
-                        },
-                        responsive: true,
-                        aspectRatio: 1.5,
-                        borderRadius: 1,
-                        scales: {
-                        x: {
-                            stacked: true,
-                        },
-                        y: {
-                            stacked: true
-                        }
-                        }
-                    }
-                });
-        }
-
-        //  Scatter Chart
-
-        let ctx2 = chartScatter.getContext('2d');
-        console.log('progdistChartJSON.default.annotations', progdistChartJSON.default.annotations)
-        var chart2 = new Chart(ctx2, {
-            type: 'scatter',
-            data: progdistChartJSON.default.data,
-            options: {
-                scales: {
-                    x: {
-                        type: 'linear',
-                        position: 'bottom',
-                        title: {
-                            display: true,
-                            text: "Combined carries towards the opponent's goal (yards)"
-                        }
-                    },
-                    y: {
-                        title: {
-                            display: true,
-                            text: "Carries into the final third"
-                        },
-                        ticks: {
-                            callback: function(value, index, ticks) {
-                                return parseInt(value);
-                            }
-                        }
-                    }
-                },
-                pointRadius: 5,
-                pointHoverRadius: 10,
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Progressive carry distance by carries into the final third',
-                        font: {
-                            family: 'Helvetica Neue',
-                            size: 24
-                        }
-                    },
-                    tooltip: {
-                        displayColors: false,
-                        callbacks: {
-                            label: function(d) {
-                                return d.raw.Player;
-                            }
-                        }
-                    },
-                    legend: {
-                        display: true,
-                    },
-                    annotation: {
-                        annotations: progdistChartJSON.default.annotations
-                    }
-                }
-            }
-        });
-
-        // Line Chart
-        let ctx3 = chartLine.getContext('2d');
-        var chart3 = new Chart(ctx3, {
-            type: 'line',
-            data: xGChart.default,
-            options: {
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Expected goals by game',
-                        font: {
-                            family: 'Helvetica Neue',
-                            size: 24
-                        }
-                    }
-                }
-            }
-        });
-    });
-
-</script>
+//     console.log('progdistChartJSON', progdistChartJSON.default)
 
 
-<body class="body2">
-	<Header />
-	<div style="height: 50px;"></div>
-    <div id="head-cont">
-        <h2>
-            Latest <span style="white-space: nowrap;">{teamName}</span> <br> match report
-        </h2>
-    </div>
+// 	onMount(async (promise) => {
+//         // Stacked Bar
+//         // In order to determine whether to create chart, we loop through our tweets asking; 'if it is false that all elements do not include the passing.png indicator' 
+//         if (!tweets.every( (e) => { return !e.text.includes('passing.png') })) {
+//             let ctx = chartStackedBar.getContext('2d');
+//             var chart = new Chart(ctx, {
+//                     type: 'bar',
+//                     data: someChartJSON.default.data,
+//                     options: {
+//                         indexAxis: 'y',
+//                         plugins: {
+//                         title: {
+//                             display: true,
+//                             text: 'Successful passes by pass distance',
+//                             font: {
+//                                 family: 'Helvetica Neue',
+//                                 size: 24
+//                             }
+//                         },
+//                         },
+//                         responsive: true,
+//                         aspectRatio: 1.5,
+//                         borderRadius: 1,
+//                         scales: {
+//                         x: {
+//                             stacked: true,
+//                         },
+//                         y: {
+//                             stacked: true
+//                         }
+//                         }
+//                     }
+//                 });
+//         }
 
-	<div id="text-top"></div>
-	<div id="tweet-cont" style="width: 640px; margin:0 auto;">
+//         //  Scatter Chart
 
-        <div class="chart" id="chartpng">
-            <div class="chart-cont" style="position: relative; height:400px">
-                <canvas bind:this={chartLine} id="myChart"></canvas>
-            </div>
-        </div>
+//         let ctx2 = chartScatter.getContext('2d');
+//         console.log('progdistChartJSON.default.annotations', progdistChartJSON.default.annotations)
+//         var chart2 = new Chart(ctx2, {
+//             type: 'scatter',
+//             data: progdistChartJSON.default.data,
+//             options: {
+//                 scales: {
+//                     x: {
+//                         type: 'linear',
+//                         position: 'bottom',
+//                         title: {
+//                             display: true,
+//                             text: "Combined carries towards the opponent's goal (yards)"
+//                         }
+//                     },
+//                     y: {
+//                         title: {
+//                             display: true,
+//                             text: "Carries into the final third"
+//                         },
+//                         ticks: {
+//                             callback: function(value, index, ticks) {
+//                                 return parseInt(value);
+//                             }
+//                         }
+//                     }
+//                 },
+//                 pointRadius: 5,
+//                 pointHoverRadius: 10,
+//                 plugins: {
+//                     title: {
+//                         display: true,
+//                         text: 'Progressive carry distance by carries into the final third',
+//                         font: {
+//                             family: 'Helvetica Neue',
+//                             size: 24
+//                         }
+//                     },
+//                     tooltip: {
+//                         displayColors: false,
+//                         callbacks: {
+//                             label: function(d) {
+//                                 return d.raw.Player;
+//                             }
+//                         }
+//                     },
+//                     legend: {
+//                         display: true,
+//                     },
+//                     annotation: {
+//                         annotations: progdistChartJSON.default.annotations
+//                     }
+//                 }
+//             }
+//         });
 
-        <div class="chart" id="chartpng">
-            <div class="chart-cont" style="position: relative; height:400px">
-                <canvas bind:this={chartScatter} id="myChart"></canvas>
-            </div>
-        </div>
-        <div class="chart" id="chartpng">
-            <div class="chart-cont" style="position: relative; height:400px">
-                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
-            </div>
-        </div>
+//         // Line Chart
+//         let ctx3 = chartLine.getContext('2d');
+//         var chart3 = new Chart(ctx3, {
+//             type: 'line',
+//             data: xGChart.default,
+//             options: {
+//                 plugins: {
+//                     title: {
+//                         display: true,
+//                         text: 'Expected goals by game',
+//                         font: {
+//                             family: 'Helvetica Neue',
+//                             size: 24
+//                         }
+//                     }
+//                 }
+//             }
+//         });
+//     });
 
-	</div>
-</body>
- -->
+// </script>
+
+
+// <body class="body2">
+// 	<Header />
+// 	<div style="height: 50px;"></div>
+//     <div id="head-cont">
+//         <h2>
+//             Latest <span style="white-space: nowrap;">{teamName}</span> <br> match report
+//         </h2>
+//     </div>
+
+// 	<div id="text-top"></div>
+// 	<div id="tweet-cont" style="width: 640px; margin:0 auto;">
+
+//         <div class="chart" id="chartpng">
+//             <div class="chart-cont" style="position: relative; height:400px">
+//                 <canvas bind:this={chartLine} id="myChart"></canvas>
+//             </div>
+//         </div>
+
+//         <div class="chart" id="chartpng">
+//             <div class="chart-cont" style="position: relative; height:400px">
+//                 <canvas bind:this={chartScatter} id="myChart"></canvas>
+//             </div>
+//         </div>
+//         <div class="chart" id="chartpng">
+//             <div class="chart-cont" style="position: relative; height:400px">
+//                 <canvas bind:this={chartStackedBar} id="myChart"></canvas>
+//             </div>
+//         </div>
+
+// 	</div>
+// </body>
+
 <style>
     .chart-title {
 		text-align: center;
