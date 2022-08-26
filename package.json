@@ -21,6 +21,7 @@
 	"type": "module",
 	"dependencies": {
 		"chart.js": "^3.8.2",
+		"chartjs-plugin-annotation": "^2.0.0",
 		"d3-shape": "^3.1.0",
 		"layercake": "^7.0.0",
 		"svelte-chartjs": "^2.0.1",

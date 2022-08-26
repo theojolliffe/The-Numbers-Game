@@ -5,10 +5,12 @@
     import * as someChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/passing.json';
     import * as progdistChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/progdist.json';
     import * as xGChart from '$lib/Teams/Manchester City/Timeseries/Expected_npxG.json';
-    import * as someJSON from '../twitterThreads.json';
+
 
     let misc = someChartJSON.default.misc
 	console.log('misc', misc)
+
+    import * as someJSON from '../twitterThreads.json';
 
     import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
     import { text } from 'svelte/internal';
@@ -18,15 +20,17 @@
         return data[e]
     })
 
-    $: teamName_date = $page.params.teamName
-    $: teamName = teamName_date.split("#")[0]
+    $: teamName = "man-city"
     $: teamName = teams.find(d => d.id==teamName).name
 
     $: tweets = data.find(e => e.misc.team == teamName).data
+
 	$: tweets = tweets.sort(function(a, b){
         return parseInt(a['id']) - parseInt(b['id'])
     });
+	$: console.log(teamName, data.find(e => e.misc.team == teamName))
 
+    $: console.log('tweets', tweets)
     let expanded;
     function toggle(id) {
         if (expanded==id) {

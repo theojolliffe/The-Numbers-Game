@@ -2,9 +2,10 @@
 	import Header from '$lib/header/Header.svelte';
 	import { page } from '$app/stores';
 	import { teams } from './fb-utils';
-    import * as someJSON from './tweets.json';
+    import * as someJSON from './twitterThreads.json';
 
     let data = someJSON.default
+
     data = Object.keys(data).map(e => {
         return data[e]
     })
