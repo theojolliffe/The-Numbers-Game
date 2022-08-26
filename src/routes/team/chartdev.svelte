@@ -1,6 +1,5 @@
 <script>
 	import Header from '$lib/header/Header.svelte';
-    import {page} from '$app/stores'
 	import { teams } from '../fb-utils'
     import * as someChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/passing.json';
     import * as progdistChartJSON from '$lib/Teams/Manchester City/2022-05-22/chart_data/progdist.json';
@@ -9,9 +8,6 @@
 
     let misc = someChartJSON.default.misc
 	console.log('misc', misc)
-
-    import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
-    import { text } from 'svelte/internal';
 
     let data = someJSON.default
     data = Object.keys(data).map(e => {
@@ -26,20 +22,6 @@
 	$: tweets = tweets.sort(function(a, b){
         return parseInt(a['id']) - parseInt(b['id'])
     });
-
-    let expanded;
-    function toggle(id) {
-        if (expanded==id) {
-            expanded = null;
-        } else {
-            expanded = id;
-        }
-	}
-
-    const url = 'https://twitter.com/LeicesterTng/status/1485011327630417928';
-	const title = 'Svelte Share Buttons Component';
-	const desc = 'Svelte based social media share buttons component with no tracking.';
-
 
     import Chart from 'chart.js/auto';
     import annotationPlugin from 'chartjs-plugin-annotation';
@@ -72,21 +54,6 @@
     };
 
     console.log('progdistChartJSON', progdistChartJSON.default)
-
-    // const data2 = {
-    //     datasets: [{
-    //         label: 'Scatter Dataset',
-    //         data: progdistChartJSON.default.data,
-    //         backgroundColor: function(d) {
-    //                             let colour = 'rgb(255, 99, 132)'
-    //                             if (d.raw) {
-    //                                 if (teamName != d.raw.Team) {
-    //                                     colour = 'rgb(80, 99, 82)'
-    //                                 }
-    //                             }
-    //                             return colour;
-    //                         }
-    //     }]}
 
 
 	onMount(async (promise) => {
@@ -228,58 +195,14 @@
                 <canvas bind:this={chartScatter} id="myChart"></canvas>
             </div>
         </div>
-
-		{#each tweets as { id, text }, i}
-            <div class={(expanded==id)?"selectedtweet":"unselectedtweet"}>
-                <div>
-                    {#if text.includes('passing.png')}
-                        <!-- <div class="chart" id="chartpng" style="height: 400px">
-                            <h2 class="chart-title">Successful passes by pass distance</h2>
-                            <div class="chart-cont">
-                                <StackedBar />
-                            </div>
-                        </div> -->
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
-                            </div>
-                        </div>
-                    {:else}
-                    <span class="tweets" on:click={toggle(id)}>{text}</span>
-                    {/if}
-                    <br>
-                    {#if expanded==id}
-                        <div class="share-cont">
-                            <Twitter class="share-button" text="{text}" url={"https://twitter.com/b/status/"+id} />
-                            <Reddit class="share-button" text="{"Read this tweet from the latest " + teamName + " match"}" url={"https://twitter.com/b/status/"+id} />
-                            <WhatsApp class="share-button" text="{text} url={"https://twitter.com/b/status/"+id}" />
-                            <Facebook class="share-button" quote="{text}" url={"https://twitter.com/b/status/"+id} />
-                        </div>
-                    {/if}
-                    <br>
-                </div>
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
             </div>
-		{/each}
+        </div>
+
 	</div>
 </body>
-
-<!-- <div>
-	{#if loaded&teamLoad&topicsLoad}
-		<div id="sf">
-			<div style="width: 640px; margin:0 auto;">
-				<div>
-					<div style="width: 640px; margin: 50px auto;">
-						<h1>Latest {teamName} match report</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-		<main>
-			{@html results(data, topics)}
-			<hr style="width: 40%; margin: 60px auto 30px auto;"/>
-		</main>
-	{/if}
-</div> -->
 
 <style>
     .chart-title {
