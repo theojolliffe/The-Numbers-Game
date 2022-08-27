@@ -1,0 +1,182 @@
+{
+    "data": {
+        "datasets": [
+            {
+                "label": "Tottenham",
+                "data": [
+                    {
+                        "Player": "Harry Kane",
+                        "x": 65,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Son Heung-min",
+                        "x": 102,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Dejan Kulusevski",
+                        "x": 123,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Pierre Hojbjerg",
+                        "x": 107,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Rodrigo Bentancur",
+                        "x": 34,
+                        "y": 0,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Ryan Sessegnon",
+                        "x": 40,
+                        "y": 2,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Emerson",
+                        "x": 226,
+                        "y": 4,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Ben Davies",
+                        "x": 247,
+                        "y": 3,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Eric Dier",
+                        "x": 106,
+                        "y": 0,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Cristian Romero",
+                        "x": 154,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    }
+                ],
+                "backgroundColor": "#0E6BA0"
+            },
+            {
+                "label": "Southampton",
+                "data": [
+                    {
+                        "Player": "Adam Armstrong",
+                        "x": 8,
+                        "y": 0,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Stuart Armstrong",
+                        "x": 13,
+                        "y": 0,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Joe Aribo",
+                        "x": 45,
+                        "y": 2,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Oriol Romeu",
+                        "x": 48,
+                        "y": 1,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "James Ward-Prowse",
+                        "x": 59,
+                        "y": 1,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Romeo Lavia",
+                        "x": 58,
+                        "y": 0,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Moussa Djenepo",
+                        "x": 113,
+                        "y": 1,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Kyle Walker-Peters",
+                        "x": 69,
+                        "y": 0,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Mohammed Salisu",
+                        "x": 59,
+                        "y": 2,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Jan Bednarek",
+                        "x": 23,
+                        "y": 0,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Yan Valery",
+                        "x": 35,
+                        "y": 0,
+                        "Team": "Southampton"
+                    },
+                    {
+                        "Player": "Jack Stephens",
+                        "x": 62,
+                        "y": 2,
+                        "Team": "Southampton"
+                    }
+                ],
+                "backgroundColor": "#C0C0C0"
+            }
+        ]
+    },
+    "annotations": {
+        "label1": {
+            "type": "label",
+            "xValue": 247,
+            "yValue": 3,
+            "xAdjust": -30,
+            "yAdjust": 30,
+            "backgroundColor": "rgba(280,280,280,0.5)",
+            "content": [
+                "Ben Davies"
+            ],
+            "textAlign": "start",
+            "callout": {
+                "display": "true"
+            }
+        },
+        "label2": {
+            "type": "label",
+            "xValue": 226,
+            "yValue": 4,
+            "xAdjust": -30,
+            "yAdjust": 30,
+            "backgroundColor": "rgba(280,280,280,0.5)",
+            "content": [
+                "Emerson"
+            ],
+            "textAlign": "start",
+            "callout": {
+                "display": "true"
+            }
+        }
+    }
+}

@@ -1,0 +1,359 @@
+{
+    "Manchester City": {
+        "2022-08-21": {
+            "data": [
+                {
+                    "tweet": "Manchester City took 10 shots on target, compared with five from Newcastle Utd. This season City have averaged 6.0 per 90 minutes.",
+                    "sentences": [
+                        "Manchester City managed to take 10 shots on target.",
+                        "Newcastle Utd managed to take five shots on target.",
+                        "This season, Manchester City have averaged 6.0 shots on target per 90 minutes."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Attack_sot",
+                            10
+                        ],
+                        [
+                            "Newcastle Utd",
+                            "Attack_sot",
+                            5
+                        ],
+                        [
+                            "Manchester City",
+                            "Attack_sot Season",
+                            6
+                        ]
+                    ],
+                    "tweet_id": "1562221655606558722"
+                },
+                {
+                    "tweet": "Manchester City dominated possession, completing 547 passes to Newcastle Utd's 200.",
+                    "sentences": [
+                        "Manchester City completed 547 passes.",
+                        "Newcastle Utd completed 200 passes."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Passing_Total Succ",
+                            547
+                        ],
+                        [
+                            "Newcastle Utd",
+                            "Passing_Total Succ",
+                            200
+                        ]
+                    ],
+                    "image": "Manchester City_2022-08-21_passing.png",
+                    "tweet_id": "1562221668441149440"
+                },
+                {
+                    "tweet": "Manchester City were aggressive out of possession, making four tackles in the final third to Newcastle Utd's two. This season City have averaged 2.3 per 90 minutes.",
+                    "sentences": [
+                        "Manchester City attempted to make four challenges in the final third.",
+                        "Newcastle Utd attempted to make two challenges in the final third.",
+                        "This season, Manchester City have averaged 2.3 attempted challenges in the final third per 90 minutes."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Attack_Tackles Final Third",
+                            4
+                        ],
+                        [
+                            "Newcastle Utd",
+                            "Attack_Tackles Final Third",
+                            2
+                        ],
+                        [
+                            "Manchester City",
+                            "Attack_Tackles Final Third Season",
+                            2.3
+                        ]
+                    ],
+                    "tweet_id": "1562221679895785475"
+                },
+                {
+                    "tweet": "Manchester City dominated possession, completing 42 passes in the final third to Newcastle Utd's 16.",
+                    "sentences": [
+                        "Manchester City managed to make 42 passes in the final third.",
+                        "Newcastle Utd managed to make 16 passes in the final third."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Passing_Passes Final Third",
+                            42
+                        ],
+                        [
+                            "Newcastle Utd",
+                            "Passing_Passes Final Third",
+                            16
+                        ]
+                    ],
+                    "tweet_id": "1562221690616426497"
+                },
+                {
+                    "tweet": "Manchester City attempted 15 challenges in this game, considerably more than the 9.3 they've averaged per 90 minutes this season.",
+                    "sentences": [
+                        "Manchester City attempted to make 15 challenges.",
+                        "This season, Manchester City have averaged 9.3 attempted challenges per 90 minutes."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Defence_Tackles",
+                            15
+                        ],
+                        [
+                            "Manchester City",
+                            "Defence_Tackles Season",
+                            9.3
+                        ]
+                    ],
+                    "tweet_id": "1562221701953335298"
+                },
+                {
+                    "tweet": "Manchester City made 11 successful tackles to Newcastle Utd's five. This season Manchester City have averaged 7.0 successful tackles per 90 minutes.",
+                    "sentences": [
+                        "Manchester City won 11 tackles.",
+                        "Newcastle Utd won five tackles.",
+                        "This season, Manchester City have averaged 7.0 successful tackles per 90 minutes."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Defence_Tackles Succ",
+                            11
+                        ],
+                        [
+                            "Newcastle Utd",
+                            "Defence_Tackles Succ",
+                            5
+                        ],
+                        [
+                            "Manchester City",
+                            "Defence_Tackles Succ Season",
+                            7
+                        ]
+                    ],
+                    "tweet_id": "1562221712674275330"
+                },
+                {
+                    "tweet": "Manchester City attempted six challenges in the defensive third, considerably more than their season average of 3.3 per 90 minutes.",
+                    "sentences": [
+                        "Manchester City attempted to make six challenges in the defensive third.",
+                        "This season, Manchester City have averaged 3.3 attempted challenges in the defensive third per 90 minutes."
+                    ],
+                    "story": [
+                        [
+                            "Manchester City",
+                            "Defence_Tackles Def Third",
+                            6
+                        ],
+                        [
+                            "Manchester City",
+                            "Defence_Tackles Def Third Season",
+                            3.3
+                        ]
+                    ],
+                    "tweet_id": "1562221723441053696"
+                },
+                {
+                    "tweet": "Bernardo Silva got one assist.",
+                    "sentences": [
+                        "Bernardo Silva assisted one goal.",
+                        "Null."
+                    ],
+                    "story": [
+                        [
+                            "Bernardo Silva - Manchester City",
+                            "Attack_Assist",
+                            1
+                        ],
+                        [
+                            "Bernardo Silva - Manchester City",
+                            "Attack_Assist Teamrank",
+                            1
+                        ]
+                    ],
+                    "tweet_id": "1562221733926834183"
+                },
+                {
+                    "tweet": "Joao Cancelo successfuly completed 82 passes, while Rodri completed 102.",
+                    "sentences": [
+                        "Rodri completed 102 passes.",
+                        "Null.",
+                        "Joao Cancelo completed 82 passes.",
+                        "Null."
+                    ],
+                    "story": [
+                        [
+                            "Rodri - Manchester City",
+                            "Passing_Total Succ",
+                            102
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Passing_Total Succ Rank",
+                            1
+                        ],
+                        [
+                            "Joao Cancelo - Manchester City",
+                            "Passing_Total Succ",
+                            82
+                        ],
+                        [
+                            "Joao Cancelo - Manchester City",
+                            "Passing_Total Succ Rank",
+                            2
+                        ]
+                    ],
+                    "tweet_id": "1562221745180147713"
+                },
+                {
+                    "tweet": "Rodri saw slightly less of the ball, taking 414 passes to Manchester City's 507. He also played 18 successful long balls.",
+                    "sentences": [
+                        "Rodri took 414 passes.",
+                        "Joao Cancelo allowed Manchester City to take an average of 507 passes per 90 minutes.",
+                        "Null.",
+                        "Rodri completed 18 long balls.",
+                        "Null."
+                    ],
+                    "story": [
+                        [
+                            "Rodri - Manchester City",
+                            "Passing_Passes Prg Dist",
+                            414
+                        ],
+                        [
+                            "Joao Cancelo - Manchester City",
+                            "Passing_Passes Prg Dist",
+                            507
+                        ],
+                        [
+                            "Joao Cancelo - Manchester City",
+                            "Passing_Passes Prg Dist Rank",
+                            1
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Passing_Long Succ",
+                            18
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Passing_Long Succ Rank",
+                            1
+                        ]
+                    ],
+                    "tweet_id": "1562221755703312385"
+                },
+                {
+                    "tweet": "Bernardo Silva carried the ball into the final third five times.",
+                    "sentences": [
+                        "Bernardo Silva carried the ball 5 times into the final third.",
+                        "Null."
+                    ],
+                    "story": [
+                        [
+                            "Bernardo Silva - Manchester City",
+                            "Possession_Carries Final Third",
+                            5
+                        ],
+                        [
+                            "Bernardo Silva - Manchester City",
+                            "Possession_Carries Final Third Teamrank",
+                            1
+                        ]
+                    ],
+                    "tweet_id": "1562221766327803907"
+                },
+                {
+                    "tweet": "Bernardo Silva attempted to make four challenges, resulting in three successful tackles.",
+                    "sentences": [
+                        "Bernardo Silva attempted to make four challenges.",
+                        "Null.",
+                        "Rodri won three tackles."
+                    ],
+                    "story": [
+                        [
+                            "Bernardo Silva - Manchester City",
+                            "Defence_Tackles",
+                            4
+                        ],
+                        [
+                            "Bernardo Silva - Manchester City",
+                            "Defence_Tackles Rank",
+                            1
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Defence_Tackles Succ",
+                            3
+                        ]
+                    ],
+                    "tweet_id": "1562221776993931264"
+                },
+                {
+                    "tweet": "Null.",
+                    "sentences": [
+                        "Null."
+                    ],
+                    "story": [
+                        [
+                            "Rodri - Manchester City",
+                            "Defence_Tackles Succ Rank",
+                            1
+                        ]
+                    ],
+                    "tweet_id": "1562225563158204418"
+                },
+                {
+                    "tweet": "Rodri had six shots on target and won six aerial duels.",
+                    "sentences": [
+                        "Rodri cleared six shots on target.",
+                        "Null.",
+                        "Rodri won six aerial duels.",
+                        "Null."
+                    ],
+                    "story": [
+                        [
+                            "Rodri - Manchester City",
+                            "Defence_Clearances",
+                            6
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Defence_Clearances Teamrank",
+                            1
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Defence_Aerial Succ",
+                            6
+                        ],
+                        [
+                            "Rodri - Manchester City",
+                            "Defence_Aerial Succ Rank",
+                            1
+                        ]
+                    ],
+                    "tweet_id": "1562225573858263040"
+                }
+            ],
+            "misc": {
+                "team": "Manchester City",
+                "opponent": "Newcastle Utd",
+                "result": [
+                    3,
+                    3
+                ],
+                "date": "2022-08-21",
+                "home": "away"
+            }
+        }
+    }
+}

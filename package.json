@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@rollup/plugin-dynamic-import-vars": "^1.4.4",
 		"chart.js": "^3.8.2",
 		"chartjs-plugin-annotation": "^2.0.0",
 		"d3-shape": "^3.1.0",

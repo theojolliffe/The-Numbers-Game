@@ -1,34 +1,37 @@
 <script context="module">
     import * as json_content from '../content.json';
+    import { teams } from '../fb-utils'
+
     let data = json_content.default
     import { base, assets } from "$app/paths";
     export async function load({ params, fetch }) {
-        let teamName_date = params.teamName
+        let teamName_date = params.chartdev
         let teamName_raw = teamName_date.split(">")[0]
         let teamName = teams.find(d => d.id==teamName_raw).name
         let date = teamName_date.split(">")[1]
 
-        let content = data[teamName][date]['data']
-        console.log('content', content)
+        console.log('asests', assets)
 
         let passing_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/passing.json`).then( res => res.json());
         let carries_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/progdist.json`).then( res => res.json());
         let xg_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_npxG.json`).then( res => res.json());
+        let xa_chart_data = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_xA.json`).then( res => res.json());
+        let season_comp = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/season_comp.json`).then( res => res.json());
 
         // let json = await json_raw.json();
         console.log('passing_chart_json', passing_chart_json)
         return {
-			props: { teamName, content, passing_chart_json, carries_chart_json, xg_chart_json }
+			props: { teamName, passing_chart_json, carries_chart_json, xg_chart_json, xa_chart_data, season_comp }
 		}
     }
 </script>
 <script>
 	import Header from '$lib/header/Header.svelte';
     import {page} from '$app/stores'
-	import { teams } from '../fb-utils'
+	
     // import * as someJSON from '../content.json';
     import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
-    export let teamName, content, passing_chart_json, carries_chart_json, xg_chart_json
+    export let teamName, passing_chart_json, carries_chart_json, xg_chart_json, xa_chart_data, season_comp
 
     let expanded;
         function toggle(id) {
@@ -48,12 +51,111 @@
 	let chartStackedBar;
     let carriesScatterChart;
     let xgLineChart;
+    let xaLineChart;
+    let chartLollipop;
 
 	onMount(async (promise) => {
 
+        const lollipop_data = {
+            labels: ['Tottenham', 'Southampton'],
+            datasets: [{
+                label: 'This match',
+                data: [1, 3],
+                backgroundColor: ['yellow', 'green'],
+                borderWidth: 0,
+                barPercentage: 0.1,
+                pointStyle: 'line'
+            },{
+                label: 'Season average',
+                data: [1, 1.5],
+                backgroundColor: ['grey', 'grey'],
+                borderWidth: 0,
+                barPercentage: 0.1,
+                pointStyle: 'line',
+                categoryPercentage: 0.5,
+            }]
+        }
+
+        const lollipopChart = {
+            id: 'lollipopChart',
+            afterDatasetsDraw(chart, args, options) {
+
+
+                const right_marg = chart.scales.x.left;
+                const scale_ratio = chart.scales.x.maxWidth / chart.scales.x.max;
+                const { ctx } = chart
+                ctx.save();
+
+                for (let i = 0; i < chart.getDatasetMeta(0).data.length; i++) {
+                    const x = chart.getDatasetMeta(0).data[i].x -3
+                    const y = chart.getDatasetMeta(0).data[i].y
+                    const borderColour = chart.getDatasetMeta(0)._dataset.backgroundColor[i];                    
+                    circle(x, y, borderColour);
+                }
+
+                for (let i = 0; i < chart.getDatasetMeta(0).data.length; i++) {
+                    const x = chart.getDatasetMeta(1).data[i].x -3
+                    const y = chart.getDatasetMeta(1).data[i].y
+                    const borderColour = chart.getDatasetMeta(0)._dataset.backgroundColor[i];                    
+                    circle(x, y, 'grey');
+                }
+
+
+                function circle(x, y, borderColour) {
+                    const angle = Math.PI / 180;
+                    ctx.beginPath();
+                    ctx.fillStyle = borderColour;
+                    ctx.arc(x, y, 10, angle*0, angle*360, false)
+                    ctx.fill();
+                    ctx.closePath();
+                    ctx.restore();
+                }
+            }
+        }
+
+        // Lollipop
+        let ctx_lol = chartLollipop.getContext('2d');
+        var chart = new Chart(ctx_lol, {
+            type: 'bar',
+            data: season_comp.data,
+            options: {
+                borderWidth: 5,
+                // datasets: {
+                //     bar: {
+                //         categoryPercentage: 0.5,
+                //     }
+                // },
+                plugins: {
+                    legend: {
+                        display: true,
+                        onClick: {
+                            callback: function() { }
+                            },
+                    },
+                    tooltip: {
+                        yAlign: 'bottom'
+                    },
+                    title: {
+                        display: true,
+                        text: season_comp.misc.variable,
+                        font: {
+                            family: 'Helvetica Neue',
+                            size: 24
+                        }
+                    },
+                },
+                indexAxis : 'y',
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            },
+            plugins: [lollipopChart]
+        })
+
         // Passing Stacked Bar
         // In order to determine whether to create chart, we loop through our tweets asking; 'if it is false that all elements do not include the passing.png indicator' 
-        if (!content.every( (e) => { return (e.image===undefined)? true : !e.image.includes('passing.png') })) {
             let ctx = chartStackedBar.getContext('2d');
             var chart = new Chart(ctx, {
                     type: 'bar',
@@ -83,11 +185,9 @@
                         }
                     }
                 });
-        }
 
 
         //  Carries Scatter Chart
-        if (!content.every( (e) => { return (e.image===undefined)? true : !e.image.includes('carries.png') })) {
             let ctx2 = carriesScatterChart.getContext('2d');
             var chart2 = new Chart(ctx2, {
                 type: 'scatter',
@@ -114,6 +214,7 @@
                             }
                         }
                     },
+                    aspectRatio: 1.5,
                     pointRadius: 5,
                     pointHoverRadius: 10,
                     plugins: {
@@ -142,16 +243,15 @@
                     }
                 }
             });
-        }
 
 
         // Line Chart
-        if (!content.every( (e) => { return (e.image===undefined)? true : !e.image.includes('line.png') })) {
             let ctx3 = xgLineChart.getContext('2d');
             var chart3 = new Chart(ctx3, {
                 type: 'line',
                 data: xg_chart_json,
                 options: {
+                    aspectRatio: 1.5,
                     plugins: {
                         title: {
                             display: true,
@@ -164,7 +264,26 @@
                     }
                 }
             });
-        }
+
+            // Line Chart
+            let ctx4 = xaLineChart.getContext('2d');
+            var chart3 = new Chart(ctx4, {
+                type: 'line',
+                data: xa_chart_data,
+                options: {
+                    aspectRatio: 1.5,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Expected assists by game',
+                            font: {
+                                family: 'Helvetica Neue',
+                                size: 24
+                            }
+                        }
+                    }
+                }
+            });
 
 
     });
@@ -174,63 +293,46 @@
 <body class="body2">
 	<Header />
 	<div style="height: 50px;"></div>
-    <div id="head-cont">
-        <h2>
-            Latest <span style="white-space: nowrap;">{teamName}</span> <br> match report
-        </h2>
-    </div>
 
-	<div id="text-top"></div>
-	<div id="tweet-cont" style="width: 640px; margin:0 auto;">
+    <div id="tweet-cont" style="width: 640px; margin:0 auto;">
 
-
-
-
-
-		{#each content as { tweet_id, tweet, image }, i}
-            <div class={(expanded==tweet_id)?"selectedtweet":"unselectedtweet"}>
-                <div>
-                    {#if image && image.includes('passing.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
-                            </div>
-                        </div>
-
-                    {:else if image && image.includes('xg.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={xgLineChart} id="myChart"></canvas>
-                            </div>
-                        </div>
-
-                    {:else if image && image.includes('carries.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={carriesScatterChart} id="myChart"></canvas>
-                            </div>
-                        </div>
-
-                    {:else}
-                        <span class={(expanded==tweet_id)?"selectedTweetSpan":"tweets"} on:click={toggle(tweet_id)}>{tweet}</span>
-                    {/if}
-                    <br>
-                    {#if expanded==tweet_id}
-                        <div class="share-cont">
-                            <Twitter class="share-button" tweet="{tweet}" url={"https://twitter.com/b/status/"+tweet_id} />
-                            <Reddit class="share-button" tweet="{"Read this tweet from the latest " + teamName + " match"}" url={"https://twitter.com/b/status/"+tweet_id} />
-                            <WhatsApp class="share-button" tweet="{tweet} url={"https://twitter.com/b/status/"+tweet_id}" />
-                            <Facebook class="share-button" quote="{tweet}" url={"https://twitter.com/b/status/"+tweet_id} />
-                        </div>
-                    {/if}
-                    <br>
-                </div>
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={chartLollipop} id="myChart"></canvas>
             </div>
-		{/each}
-	</div>
+        </div>
+
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={xaLineChart} id="myChart"></canvas>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={xgLineChart} id="myChart"></canvas>
+            </div>
+        </div>
+
+        <br>
+        
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={carriesScatterChart} id="myChart"></canvas>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 
