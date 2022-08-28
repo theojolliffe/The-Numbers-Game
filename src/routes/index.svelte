@@ -1,18 +1,23 @@
+<script context="module">
+    import { base, assets } from "$app/paths";
+    export async function load({ params, fetch }) {
+
+        let content_list = await fetch(`${assets}/content_list.json`).then( res => res.json());
+
+        return {
+			props: { content_list }
+		}
+    }
+</script>
+
 <script>
 	import Header from '$lib/header/Header.svelte';
 	import { page } from '$app/stores';
 	import { teams } from './fb-utils';
     import * as someJSON from './twitterThreads.json';
 
-    let data = someJSON.default
-
-    data = Object.keys(data).map(e => {
-        return data[e]
-    })
-    data.sort(function(a, b) {
-        return b.misc.story_id - a.misc.story_id
-    })
-    console.log('data', data)
+    export let content_list
+    content_list = content_list.sort(function(a, b) { return  b.id - a.id })
     
     function addZeros(id) {
         if (String(id).length<3) {
@@ -33,11 +38,11 @@
     </h2>
     <div class='grid-container'>
 
-        {#each data as { data, misc }, i}
-            <a sveltekit:prefetch href={'/team/'+teams.find(d => d.name == misc.team)['id']}>
+        {#each content_list as misc, i}
+            <a sveltekit:prefetch href={ '/team/' + teams.find(d => d.name == misc.team)['id'] + '>' + misc.date }>
                 <div class="team-div" class:active={$page.url.pathname === '/'+teams.find(d => d.name == misc.team)['id']}>
                     <div class="row number">
-                        {addZeros(misc.story_id)}
+                        {addZeros(misc.id+1)}
                     </div>
                     <div class="row name">
                         {misc.team}
@@ -62,7 +67,6 @@
                     </div>
                 </div>
             </a>
-
         {/each}
 
     </div>

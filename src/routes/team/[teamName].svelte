@@ -1,6 +1,29 @@
 <script context="module">
     import * as json_content from '../content.json';
     let data = json_content.default
+    var teams = [
+        {id: "tottenham", name: "Tottenham"},
+        {id: "liverpool", name: "Liverpool"},
+        {id: "man-city", name: "Manchester City"},
+        {id: "newcastle", name: "Newcastle Utd"},
+        {id: "chelsea", name: "Chelsea"},
+        {id: "west-ham", name: "West Ham"},
+        {id: "arsenal", name: "Arsenal"},
+        {id: "burnley", name: "Burnley"},
+        {id: "watford", name: "Watford"},
+        {id: "leeds", name: "Leeds United"},
+        {id: "everton", name: "Everton"},
+        {id: "brentford", name: "Brentford"},
+        {id: "southampton", name: "Southampton"},
+        {id: "aston-villa", name: "Aston Villa"},
+        {id: "crystal-palace", name: "Crystal Palace"},
+        {id: "brighton", name: "Brighton"},
+        {id: "leicester", name: "Leicester City"},
+        {id: "wolves", name: "Wolves"},
+        {id: "man-utd", name: "Manchester Utd"},
+        {id: "norwich", name: "Norwich City"},
+    ]
+
     import { base, assets } from "$app/paths";
     export async function load({ params, fetch }) {
         let teamName_date = params.teamName
@@ -8,27 +31,28 @@
         let teamName = teams.find(d => d.id==teamName_raw).name
         let date = teamName_date.split(">")[1]
 
-        let content = data[teamName][date]['data']
-        console.log('content', content)
+        let content = await fetch(`${assets}/Teams/${teamName}/${date}/content.json`).then( res => res.json());
+        content.data = content.data.filter( d => d.tweet != 'Null.')
 
         let passing_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/passing.json`).then( res => res.json());
         let carries_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/progdist.json`).then( res => res.json());
         let xg_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_npxG.json`).then( res => res.json());
+        let xa_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_xA.json`).then( res => res.json());
 
         // let json = await json_raw.json();
         console.log('passing_chart_json', passing_chart_json)
         return {
-			props: { teamName, content, passing_chart_json, carries_chart_json, xg_chart_json }
+			props: { teamName, content, passing_chart_json, carries_chart_json, xg_chart_json, xa_chart_json }
 		}
     }
 </script>
 <script>
 	import Header from '$lib/header/Header.svelte';
     import {page} from '$app/stores'
-	import { teams } from '../fb-utils'
+	
     // import * as someJSON from '../content.json';
     import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
-    export let teamName, content, passing_chart_json, carries_chart_json, xg_chart_json
+    export let teamName, content, passing_chart_json, carries_chart_json, xg_chart_json, xa_chart_json
 
     let expanded;
         function toggle(id) {
@@ -45,15 +69,13 @@
     import { onMount } from 'svelte';
     
 
-	let chartStackedBar;
-    let carriesScatterChart;
-    let xgLineChart;
+	let chartStackedBar, carriesScatterChart, xgLineChart, xaLineChart;
 
 	onMount(async (promise) => {
 
         // Passing Stacked Bar
         // In order to determine whether to create chart, we loop through our tweets asking; 'if it is false that all elements do not include the passing.png indicator' 
-        if (!content.every( (e) => { return (e.image===undefined)? true : !e.image.includes('passing.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('passing.png') })) {
             let ctx = chartStackedBar.getContext('2d');
             var chart = new Chart(ctx, {
                     type: 'bar',
@@ -87,7 +109,7 @@
 
 
         //  Carries Scatter Chart
-        if (!content.every( (e) => { return (e.image===undefined)? true : !e.image.includes('carries.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('carries.png') })) {
             let ctx2 = carriesScatterChart.getContext('2d');
             var chart2 = new Chart(ctx2, {
                 type: 'scatter',
@@ -146,12 +168,58 @@
 
 
         // Line Chart
-        if (!content.every( (e) => { return (e.image===undefined)? true : !e.image.includes('line.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('line.png') })) {
             let ctx3 = xgLineChart.getContext('2d');
             var chart3 = new Chart(ctx3, {
                 type: 'line',
                 data: xg_chart_json,
                 options: {
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Expected goals by game',
+                            font: {
+                                family: 'Helvetica Neue',
+                                size: 24
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+
+        // xA Line Chart
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('xa.png') })) {
+            let ctx3 = xaLineChart.getContext('2d');
+            var chart3 = new Chart(ctx3, {
+                type: 'line',
+                data: xa_chart_json,
+                options: {
+                    aspectRatio: 1.5,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Expected assists by game',
+                            font: {
+                                family: 'Helvetica Neue',
+                                size: 24
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+
+        // xG Line Chart
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('xg.png') })) {
+            let ctx3 = xgLineChart.getContext('2d');
+            var chart3 = new Chart(ctx3, {
+                type: 'line',
+                data: xg_chart_json,
+                options: {
+                    aspectRatio: 1.5,
                     plugins: {
                         title: {
                             display: true,
@@ -183,13 +251,12 @@
 	<div id="text-top"></div>
 	<div id="tweet-cont" style="width: 640px; margin:0 auto;">
 
-
-
-
-
-		{#each content as { tweet_id, tweet, image }, i}
+        {#each content.data as { tweet_id, tweet, image }, i}
             <div class={(expanded==tweet_id)?"selectedtweet":"unselectedtweet"}>
                 <div>
+
+                    <span class={(expanded==tweet_id)?"selectedTweetSpan":"tweets"} on:click={toggle(tweet_id)}>{tweet}</span>
+
                     {#if image && image.includes('passing.png')}
 
                         <div class="chart" id="chartpng">
@@ -206,6 +273,16 @@
                             </div>
                         </div>
 
+
+                    {:else if image && image.includes('xa.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={xaLineChart} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
                     {:else if image && image.includes('carries.png')}
 
                         <div class="chart" id="chartpng">
@@ -214,9 +291,8 @@
                             </div>
                         </div>
 
-                    {:else}
-                        <span class={(expanded==tweet_id)?"selectedTweetSpan":"tweets"} on:click={toggle(tweet_id)}>{tweet}</span>
                     {/if}
+
                     <br>
                     {#if expanded==tweet_id}
                         <div class="share-cont">
