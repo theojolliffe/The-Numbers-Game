@@ -1,0 +1,188 @@
+{
+    "data": {
+        "datasets": [
+            {
+                "label": "Tottenham",
+                "data": [
+                    {
+                        "Player": "Harry Kane",
+                        "x": 110,
+                        "y": 3,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Son Heung-min",
+                        "x": 71,
+                        "y": 0,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Dejan Kulusevski",
+                        "x": 134,
+                        "y": 0,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Yves Bissouma",
+                        "x": 151,
+                        "y": 7,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Pierre Hojbjerg",
+                        "x": 228,
+                        "y": 8,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Ivan Perisic",
+                        "x": 185,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Emerson",
+                        "x": 60,
+                        "y": 0,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Ben Davies",
+                        "x": 68,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Eric Dier",
+                        "x": 298,
+                        "y": 1,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Davinson Sanchez",
+                        "x": 136,
+                        "y": 3,
+                        "Team": "Tottenham"
+                    },
+                    {
+                        "Player": "Hugo Lloris",
+                        "x": 29,
+                        "y": 0,
+                        "Team": "Tottenham"
+                    }
+                ],
+                "backgroundColor": "#0E6BA0"
+            },
+            {
+                "label": "West Ham",
+                "data": [
+                    {
+                        "Player": "Michail Antonio",
+                        "x": 47,
+                        "y": 0,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Pablo Fornals",
+                        "x": 106,
+                        "y": 5,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Jarrod Bowen",
+                        "x": 39,
+                        "y": 0,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Said Benrahma",
+                        "x": 74,
+                        "y": 2,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Lucas Paqueta",
+                        "x": 2,
+                        "y": 0,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Declan Rice",
+                        "x": 154,
+                        "y": 10,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Tomas SouÄek",
+                        "x": 44,
+                        "y": 4,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Aaron Cresswell",
+                        "x": 48,
+                        "y": 1,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Kurt Zouma",
+                        "x": 10,
+                        "y": 2,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Thilo Kehrer",
+                        "x": 90,
+                        "y": 4,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Vladimir Coufal",
+                        "x": 43,
+                        "y": 2,
+                        "Team": "West Ham"
+                    },
+                    {
+                        "Player": "Lukasz Fabianski",
+                        "x": 28,
+                        "y": 0,
+                        "Team": "West Ham"
+                    }
+                ],
+                "backgroundColor": "#C0C0C0"
+            }
+        ]
+    },
+    "annotations": {
+        "label1": {
+            "type": "label",
+            "xValue": 298,
+            "yValue": 1,
+            "xAdjust": -30,
+            "yAdjust": 30,
+            "backgroundColor": "rgba(280,280,280,0.5)",
+            "content": [
+                "Eric Dier"
+            ],
+            "textAlign": "start",
+            "callout": {
+                "display": "true"
+            }
+        },
+        "label2": {
+            "type": "label",
+            "xValue": 228,
+            "yValue": 8,
+            "xAdjust": -30,
+            "yAdjust": 30,
+            "backgroundColor": "rgba(280,280,280,0.5)",
+            "content": [
+                "Pierre Hojbjerg"
+            ],
+            "textAlign": "start",
+            "callout": {
+                "display": "true"
+            }
+        }
+    }
+}

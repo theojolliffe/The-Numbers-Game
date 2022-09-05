@@ -18,6 +18,7 @@
 
     export let content_list
     content_list = content_list.sort(function(a, b) { return  b.id - a.id })
+    $: console.log('content', content_list)
     
     function addZeros(id) {
         if (String(id).length<3) {

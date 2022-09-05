@@ -1,0 +1,357 @@
+{
+    "data": [
+        {
+            "tweet": "See the numbers behind Tottenham's recent draw ⚽️ 🧵 👇",
+            "sentences": [
+                "Tottenham drew 1-1 with the opponent."
+            ],
+            "story": [
+                [
+                    "Tottenham",
+                    "Draw",
+                    "1 - 1"
+                ]
+            ],
+            "tweet_id": "1565450415981854720"
+        },
+        {
+            "tweet": "With 0.7 expected goals, Tottenham created fewer good goal-scoring chances than West Ham (1.1 xG) and considerably less than they did in their previous game (2.8 xG against Nottingham Forest).",
+            "sentences": [
+                "Tottenham only created 0.7 xG worth of chances.",
+                "West Ham created 1.1 xG worth of chances.",
+                "Tottenham created 2.8 xG worth of chances in their previous game (against Nottingham Forest)."
+            ],
+            "story": [
+                [
+                    "Tottenham",
+                    "Expected goals",
+                    0.7
+                ],
+                [
+                    "West Ham",
+                    "Expected goals",
+                    1.1
+                ],
+                [
+                    "Tottenham",
+                    "Expected goals (in last match v Nott'ham Forest)",
+                    2.8
+                ]
+            ],
+            "image": "Tottenham_2022-08-31>Non-penalty expected goals_timeseries.png",
+            "tweet_id": "1565450443567816705"
+        },
+        {
+            "tweet": "Tottenham did however pose a threat, carrying the ball into the opponent's box nine times. West Ham made two carries into the Spurs box, while 4.4 times per 90 is the average for Premier League teams this season.",
+            "sentences": [
+                "Tottenham carried the ball into the opponent's box nine times.",
+                "West Ham carried the ball into the opponent's box two times.",
+                "Premier League teams carry the ball into the opponent's box an average of 4.4 times per 90 minutes."
+            ],
+            "story": [
+                [
+                    "Tottenham",
+                    "Carries into the penalty area",
+                    9
+                ],
+                [
+                    "West Ham",
+                    "Carries into the penalty area",
+                    2
+                ],
+                [
+                    "Premier League",
+                    "Carries into the penalty area (league average)",
+                    4.4
+                ]
+            ],
+            "tweet_id": "1565450473242492931"
+        },
+        {
+            "tweet": "Tottenham carried the ball a combined distance of 1,548 yards towards the opponent's goal, while West Ham only managed 695 yards. Spurs also completed eight passes into the opponent's box, compared with three for West Ham.",
+            "sentences": [
+                "Tottenham carried the ball a combined distance of 1548 yards towards the opponent's goal.",
+                "West Ham carried the ball a combined distance of 695 yards towards the opponent's goal.",
+                "Tottenham played eight successful balls into the opponent's box.",
+                "West Ham only managed to play three successful balls into the opponent's box."
+            ],
+            "story": [
+                [
+                    "Tottenham",
+                    "Progressive distance carried",
+                    1548
+                ],
+                [
+                    "West Ham",
+                    "Progressive distance carried",
+                    695
+                ],
+                [
+                    "Tottenham",
+                    "Passes into the penalty area",
+                    8
+                ],
+                [
+                    "West Ham",
+                    "Passes into the penalty area",
+                    3
+                ]
+            ],
+            "image": "Tottenham_2022-08-31>Progressive distance carried_scatter.png",
+            "tweet_id": "1565450502594187264"
+        },
+        {
+            "tweet": "Tottenham made four interceptions in this match, considerably less than West Ham's 14. In their last match (against Nottingham Forest) Spurs made 23 interceptions, while this season they have averaged 16 per match.",
+            "sentences": [
+                "Tottenham made four interceptions.",
+                "West Ham made 14 interceptions.",
+                "In their last game (against Nottingham Forest) Tottenham made 23 interceptions.",
+                "This season, Tottenham have averaged 16 interceptions per 90 minutes.",
+                "Premier League teams have averaged 14 interceptions per 90 minutes."
+            ],
+            "story": [
+                [
+                    "Tottenham",
+                    "Interceptions",
+                    4
+                ],
+                [
+                    "West Ham",
+                    "Interceptions",
+                    14
+                ],
+                [
+                    "Tottenham",
+                    "Interceptions (in last match v Nott'ham Forest)",
+                    23
+                ],
+                [
+                    "Tottenham",
+                    "Interceptions (season average)",
+                    16
+                ],
+                [
+                    "Premier League",
+                    "Interceptions (league average)",
+                    14
+                ]
+            ],
+            "image": "Tottenham_2022-08-31>lollipop0.png",
+            "tweet_id": "1565450530536710146"
+        },
+        {
+            "tweet": "Ivan Perisic, our man of the match, created some of the best chances of the game - tallying an xA of 0.2 (joint most of anyone on the pitch, alongside Vladimir Coufal).",
+            "sentences": [
+                "Ivan Perisic was our man of the match.",
+                "Ivan Perisic tallied 0.2 expected assists.",
+                "Vladimir Coufal created joint most expected goals of any player on the pitch.",
+                "Vladimir Coufal tallied 0.2 expected assists.",
+                "Ivan Perisic created joint most expected goals of any player on the pitch."
+            ],
+            "story": [
+                [
+                    "Ivan Perisic - Tottenham",
+                    "MOTM",
+                    "true"
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Expected assists",
+                    0.2
+                ],
+                [
+                    "Vladimir Coufal - West Ham",
+                    "Expected assists (rank) = ",
+                    1
+                ],
+                [
+                    "Vladimir Coufal - West Ham",
+                    "Expected assists",
+                    0.2
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Expected assists (rank) = ",
+                    1
+                ]
+            ],
+            "tweet_id": "1565450557455847424"
+        },
+        {
+            "tweet": "Ivan Perisic made three key passes (joint most alongside Said Benrahma) and carried the ball into the opponent's box four times (more than any other player on the pitch).",
+            "sentences": [
+                "Ivan Perisic made three key passes.",
+                "Said Benrahma completed joint most key passes of anyone on the pitch.",
+                "Said Benrahma made three passes that lead to a teammate's shot.",
+                "Ivan Perisic completed joint most key passes of anyone on the pitch.",
+                "Ivan Perisic carried the ball into the opponent's box four times.",
+                "Ivan Perisic carried the ball into the opponent's box more times than any other player on the pitch."
+            ],
+            "story": [
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Key passes",
+                    3
+                ],
+                [
+                    "Said Benrahma - West Ham",
+                    "Key passes (rank) = ",
+                    1
+                ],
+                [
+                    "Said Benrahma - West Ham",
+                    "Key passes",
+                    3
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Key passes (rank) = ",
+                    1
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Carries into the penalty area",
+                    4
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Carries into the penalty area (rank)",
+                    1
+                ]
+            ],
+            "tweet_id": "1565450587889713159"
+        },
+        {
+            "tweet": "Perisic successfully played two balls into West Ham's box, successfully dribbled past an opponent on two occasions and won 100% of his aerial duels.",
+            "sentences": [
+                "Ivan Perisic dribbled past an opponent two times.",
+                "Ivan Perisic dribbled past an opponent more times than any other player on the pitch.",
+                "Ivan Perisic managed to play an impressive 2 successful balls into the opponent's box.",
+                "Ivan Perisic played the most balls into the box of any one in this match.",
+                "Ivan Perisic won 100% of his aerial duels.",
+                "Ivan Perisic won more aerial duels than any other player on the pitch."
+            ],
+            "story": [
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Successful dribbles",
+                    2
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Successful dribbles (rank)",
+                    1
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Passes into the penalty area",
+                    2
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Passes into the penalty area (rank)",
+                    1
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Percentage of aerial duels won",
+                    100
+                ],
+                [
+                    "Ivan Perisic - Tottenham",
+                    "Percentage of aerial duels won (rank)",
+                    1
+                ]
+            ],
+            "image": "Tottenham_2022-08-31>Successful dribbles_timeseries.png",
+            "tweet_id": "1565450617589465088"
+        },
+        {
+            "tweet": "Eric Dier completed more passes than anyone else on the pitch - 101 successful passes out of 107. His 94% pass completion rate was also the game's highest.",
+            "sentences": [
+                "Eric Dier attempted to make 107 passes.",
+                "Eric Dier attempted more passes than any other player on the pitch.",
+                "Eric Dier completed 101 passes.",
+                "Eric Dier completed more passes than any other player on the pitch.",
+                "94% of Eric Dier's passes found a teammate.",
+                "Eric Dier had the highest passing accuracy of any player on the pitch."
+            ],
+            "story": [
+                [
+                    "Eric Dier - Tottenham",
+                    "Attempted passes",
+                    107
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Attempted passes (rank)",
+                    1
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Successful passes",
+                    101
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Successful passes (rank)",
+                    1
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Pass completion rate",
+                    94
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Pass completion rate (rank)",
+                    1
+                ]
+            ],
+            "image": "Tottenham_2022-08-31>Successful passes_stacked.png",
+            "tweet_id": "1565450647180570624"
+        },
+        {
+            "tweet": "Eric Dier both passed the ball (a combined 614 yards) and carried the ball (a total of 298 yards) farther towards the opponent's goal than anyone else playing in this match.",
+            "sentences": [
+                "Eric Dier passed the ball a total of 614 yards towards the opponents goal.",
+                "Eric Dier passed the ball farther towards the opponents goal than any other player on the pitch.",
+                "Eric Dier carried the ball a combined distance of 298 yards towards the opponent's goal.",
+                "Eric Dier carried the ball further towards the opponent's goal than any other player on the pitch."
+            ],
+            "story": [
+                [
+                    "Eric Dier - Tottenham",
+                    "Progressive pass distance",
+                    614
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Progressive pass distance (rank)",
+                    1
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Progressive distance carried",
+                    298
+                ],
+                [
+                    "Eric Dier - Tottenham",
+                    "Progressive distance carried (rank)",
+                    1
+                ]
+            ],
+            "image": "Tottenham_2022-08-31>Progressive pass distance_scatter.png"
+        }
+    ],
+    "misc": {
+        "team": "Tottenham",
+        "opponent": "West Ham",
+        "result": [
+            1,
+            1
+        ],
+        "date": "2022-08-31",
+        "home": "away"
+    }
+}

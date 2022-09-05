@@ -34,15 +34,18 @@
         let content = await fetch(`${assets}/Teams/${teamName}/${date}/content.json`).then( res => res.json());
         content.data = content.data.filter( d => d.tweet != 'Null.')
 
-        let passing_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/passing.json`).then( res => res.json());
-        let carries_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/progdist.json`).then( res => res.json());
-        let xg_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_npxG.json`).then( res => res.json());
-        let xa_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_xA.json`).then( res => res.json());
+        let chart_data = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data.json`).then( res => res.json());
+        chart_data = chart_data
+
+
+        // let carries_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/progdist.json`).then( res => res.json());
+        // let xg_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_npxG.json`).then( res => res.json());
+        // let xa_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_xA.json`).then( res => res.json());
 
         // let json = await json_raw.json();
-        console.log('passing_chart_json', passing_chart_json)
+        
         return {
-			props: { teamName, content, passing_chart_json, carries_chart_json, xg_chart_json, xa_chart_json }
+			props: { teamName, content, chart_data }
 		}
     }
 </script>
@@ -52,15 +55,17 @@
 	
     // import * as someJSON from '../content.json';
     import { Email, HackerNews, Reddit, LinkedIn, Pinterest, Telegram, Tumblr, Vk, WhatsApp, Xing, Facebook, Twitter, Line } from 'svelte-share-buttons-component';
-    export let teamName, content, passing_chart_json, carries_chart_json, xg_chart_json, xa_chart_json
+    export let teamName, content, chart_data
 
-    let expanded;
-        function toggle(id) {
-            if (expanded==id) {
-                expanded = null;
-            } else {
-                expanded = id;
-            }
+    $: console.log('content', content.data)
+    let expanded = 'xoxo';
+    function toggle(id) {
+        console.log('id', id)
+        if (expanded==id) {
+            expanded = 'xoxo';
+        } else {
+            expanded = id;
+        }
     }
 
     import Chart from 'chart.js/auto';
@@ -69,17 +74,19 @@
     import { onMount } from 'svelte';
     
 
-	let chartStackedBar, carriesScatterChart, xgLineChart, xaLineChart;
+	let chartStackedBar, PressStackedBar, carriesScatterChart, passesScatterChart, xgLineChart, xaLineChart, dribblesLineChart;
 
 	onMount(async (promise) => {
 
+
+
         // Passing Stacked Bar
         // In order to determine whether to create chart, we loop through our tweets asking; 'if it is false that all elements do not include the passing.png indicator' 
-        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('passing.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Successful passes_stacked.png') })) {
             let ctx = chartStackedBar.getContext('2d');
             var chart = new Chart(ctx, {
                     type: 'bar',
-                    data: passing_chart_json.data,
+                    data: chart_data.filter( e => e.type == 'stacked_bar').find( e => e.topic == "Successful passes")['data'],
                     options: {
                         indexAxis: 'y',
                         plugins: {
@@ -93,7 +100,47 @@
                         },
                         },
                         responsive: true,
-                        aspectRatio: 1.5,
+                        aspectRatio: 1.4,
+                        borderRadius: 1,
+                        scales: {
+                        x: {
+                            stacked: true,
+                            title: {
+                                display: true,
+                                text: "Number of passes (not inluding passes shorter than 5 yards)",
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        y: {
+                            stacked: true
+                        }
+                        }
+                    }
+                });
+        }
+
+
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Presses_stacked.png') })) {
+            let ctxpress = PressStackedBar.getContext('2d');
+            var chart = new Chart(ctxpress, {
+                    type: 'bar',
+                    data: chart_data.filter( e => e.type == 'stacked_bar').find( e => e.topic == "Presses")['data'],
+                    options: {
+                        indexAxis: 'y',
+                        plugins: {
+                        title: {
+                            display: true,
+                            text: 'Presses by third of the pitch',
+                            font: {
+                                family: 'Helvetica Neue',
+                                size: 24
+                            }
+                        },
+                        },
+                        responsive: true,
+                        aspectRatio: 1.4,
                         borderRadius: 1,
                         scales: {
                         x: {
@@ -109,11 +156,11 @@
 
 
         //  Carries Scatter Chart
-        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('carries.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Progressive distance carried_scatter.png') })) {
             let ctx2 = carriesScatterChart.getContext('2d');
             var chart2 = new Chart(ctx2, {
                 type: 'scatter',
-                data: carries_chart_json.data,
+                data: chart_data.filter( e => e.type == 'scatter').find( e => e.topic == "Progressive distance carried").data.data,
                 options: {
                     scales: {
                         x: {
@@ -121,29 +168,38 @@
                             position: 'bottom',
                             title: {
                                 display: true,
-                                text: "Combined carries towards the opponent's goal (yards)"
+                                text: "Combined carries towards the opponent's goal (yards)",
+                                font: {
+                                    size: 18
+                                }
                             }
                         },
                         y: {
                             title: {
                                 display: true,
-                                text: "Carries into the final third"
+                                text: "Carries into the final third",
+                                font: {
+                                    size: 18
+                                }
                             },
                             ticks: {
-                                callback: function(value, index, ticks) {
-                                    return parseInt(value);
-                                }
-                            }
+                                font: {
+                                    size: 14,
+                                },
+                                autoSkip: true,
+                                maxTicksLimit: 6
+                            },
+                            offset: true
                         }
                     },
-                    pointRadius: 5,
-                    pointHoverRadius: 10,
+                    aspectRatio: 1.4,
+                    pointRadius: 8,
+                    pointHoverRadius: 11,
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Progressive carry distance by carries into the final third',
+                            text: 'Forward carrying',
                             font: {
-                                family: 'Helvetica Neue',
                                 size: 24
                             }
                         },
@@ -157,9 +213,18 @@
                         },
                         legend: {
                             display: true,
+                            labels: {
+                                usePointStyle: true,
+                                boxWidth: 16,
+                                boxHeight: 10,
+                                font: {
+                                    size: 14
+                                },
+                            },
                         },
                         annotation: {
-                            annotations: carries_chart_json.annotations
+                            clip: false,
+                            annotations: chart_data.filter( e => e.type == 'scatter').find( e => e.topic == "Progressive distance carried").data.annotations
                         }
                     }
                 }
@@ -167,13 +232,91 @@
         }
 
 
-        // Line Chart
-        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('line.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Progressive pass distance_scatter.png') })) {
+            let ctx2 = passesScatterChart.getContext('2d');
+            var chart2 = new Chart(ctx2, {
+                type: 'scatter',
+                data: chart_data.filter( e => e.type == 'scatter').find( e => e.topic == "Progressive pass distance").data.data,
+                options: {
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            position: 'bottom',
+                            title: {
+                                display: true,
+                                text: "Combined passes towards the opponent's goal (yards)",
+                                font: {
+                                    size: 18
+                                }
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: "Passes into the final third",
+                                font: {
+                                    size: 18
+                                }
+                            },
+                            ticks: {
+                                autoSkip: true,
+                                maxTicksLimit: 6,
+                                font: {
+                                    size: 14
+                                }
+                            },
+                            offset: true
+                        },
+                    },
+                    aspectRatio: 1.4,
+                    pointRadius: 8,
+                    pointHoverRadius: 11,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Forward passing',
+                            font: {
+                                size: 24
+                            }
+                        },
+                        tooltip: {
+                            displayColors: false,
+                            callbacks: {
+                                label: function(d) {
+                                    return d.raw.Player;
+                                }
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                usePointStyle: true,
+                                boxWidth: 16,
+                                boxHeight: 10,
+                                font: {
+                                    size: 14
+                                },
+                            },
+                        },
+                        annotation: {
+                            clip: false,
+                            annotations: chart_data.filter( e => e.type == 'scatter').find( e => e.topic == "Progressive pass distance").data.annotations
+                        }
+                    }
+                }
+            });
+        }
+
+
+        // xG Chart
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Non-penalty expected goals_timeseries.png') })) {
             let ctx3 = xgLineChart.getContext('2d');
             var chart3 = new Chart(ctx3, {
                 type: 'line',
-                data: xg_chart_json,
+                data: chart_data.filter( e => e.type == 'timeseries').find( e => e.topic == "Non-penalty expected goals")['data'],
                 options: {
+                    aspectRatio: 1.4,
+                    pointRadius: 8,
                     plugins: {
                         title: {
                             display: true,
@@ -183,6 +326,11 @@
                                 size: 24
                             }
                         }
+                    },
+                    scales: {
+                        y: {
+                            offset: true
+                        }
                     }
                 }
             });
@@ -190,13 +338,14 @@
 
 
         // xA Line Chart
-        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('xa.png') })) {
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Expected assists_timeseries.png') })) {
             let ctx3 = xaLineChart.getContext('2d');
             var chart3 = new Chart(ctx3, {
                 type: 'line',
-                data: xa_chart_json,
+                data: chart_data.filter( e => e.type == 'timeseries').find( e => e.topic == "Expected assists")['data'],
                 options: {
-                    aspectRatio: 1.5,
+                    aspectRatio: 1.4,
+                    pointRadius: 8,
                     plugins: {
                         title: {
                             display: true,
@@ -212,18 +361,19 @@
         }
 
 
-        // xG Line Chart
-        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('xg.png') })) {
-            let ctx3 = xgLineChart.getContext('2d');
+        // Successful dribbles Chart
+        if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Successful dribbles_timeseries.png') })) {
+            let ctx3 = dribblesLineChart.getContext('2d');
             var chart3 = new Chart(ctx3, {
                 type: 'line',
-                data: xg_chart_json,
+                data: chart_data.filter( e => e.type == 'timeseries').find( e => e.topic == "Successful dribbles")['data'],
                 options: {
-                    aspectRatio: 1.5,
+                    aspectRatio: 1.4,
+                    pointRadius: 8,
                     plugins: {
                         title: {
                             display: true,
-                            text: 'Expected goals by game',
+                            text: 'Successful dribbles by game',
                             font: {
                                 family: 'Helvetica Neue',
                                 size: 24
@@ -233,9 +383,12 @@
                 }
             });
         }
-
-
     });
+
+    let content_body = content.data.slice(1)
+    let content_title = content.data[0].tweet.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
+
+
 </script>
 
 
@@ -244,54 +397,20 @@
 	<div style="height: 50px;"></div>
     <div id="head-cont">
         <h2>
-            Latest <span style="white-space: nowrap;">{teamName}</span> <br> match report
+            {content_title}
         </h2>
     </div>
 
 	<div id="text-top"></div>
 	<div id="tweet-cont" style="width: 640px; margin:0 auto;">
 
-        {#each content.data as { tweet_id, tweet, image }, i}
+        {#each content_body as { tweet_id, tweet, image }, i}
             <div class={(expanded==tweet_id)?"selectedtweet":"unselectedtweet"}>
                 <div>
 
-                    <span class={(expanded==tweet_id)?"selectedTweetSpan":"tweets"} on:click={toggle(tweet_id)}>{tweet}</span>
-
-                    {#if image && image.includes('passing.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
-                            </div>
-                        </div>
-
-                    {:else if image && image.includes('xg.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={xgLineChart} id="myChart"></canvas>
-                            </div>
-                        </div>
+                    <span class={(expanded==tweet_id)?"selectedTweetSpan":"tweets"} on:click={() => toggle(tweet_id)}>{tweet}</span>
 
 
-                    {:else if image && image.includes('xa.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={xaLineChart} id="myChart"></canvas>
-                            </div>
-                        </div>
-
-
-                    {:else if image && image.includes('carries.png')}
-
-                        <div class="chart" id="chartpng">
-                            <div class="chart-cont" style="position: relative; height:400px">
-                                <canvas bind:this={carriesScatterChart} id="myChart"></canvas>
-                            </div>
-                        </div>
-
-                    {/if}
 
                     <br>
                     {#if expanded==tweet_id}
@@ -303,12 +422,80 @@
                         </div>
                     {/if}
                     <br>
+
+
+
+                    {#if image && image.includes('Successful passes_stacked.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={chartStackedBar} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
+                    {:else if image && image.includes('Presses_stacked.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={PressStackedBar} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
+                    {:else if image && image.includes('Non-penalty expected goals_timeseries.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={xgLineChart} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                    {:else if image && image.includes('Successful dribbles_timeseries.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={dribblesLineChart} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
+                    {:else if image && image.includes('Expected assists_timeseries.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={xaLineChart} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
+                    {:else if image && image.includes('Progressive distance carried_scatter.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={carriesScatterChart} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
+                    {:else if image && image.includes('Progressive pass distance_scatter.png')}
+
+                        <div class="chart" id="chartpng">
+                            <div class="chart-cont" style="position: relative; height:400px">
+                                <canvas bind:this={passesScatterChart} id="myChart"></canvas>
+                            </div>
+                        </div>
+
+
+                    {/if}
+
+                    <br>
+
                 </div>
             </div>
 		{/each}
 	</div>
 </body>
-
 
 <style>
     .chart-title {
@@ -451,11 +638,12 @@
     .source {
         text-decoration: underline; 
     }
-    h2 {
+    h2 { 
         font-family: system-ui;
-        font-size: 8vw;
+        font-size: 6vw;
         margin: auto;
-        line-height: 0.85;
+        line-height: 1.4;
+        width: 80%;
     }
     a {
         text-decoration: auto;
@@ -510,7 +698,6 @@
         margin: 0 0 50px -16px;
         /* height: 220px; */
         padding: 5%;
-        padding-bottom: 25%;
     }
     #text-top {
         height: 50px;
@@ -526,7 +713,7 @@
             font-size: medium;
         }
         h2 {
-            font-size: 10vw;
+            font-size: 8vw;
         }
     }
 

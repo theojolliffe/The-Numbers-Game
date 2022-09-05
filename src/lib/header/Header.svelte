@@ -8,7 +8,7 @@
         <div class="div-block-107">
             <div class="div-block-109">
                 <a href="https://twitter.com/_Numbers_Game" target="_blank" class="text-regular bold info-link bluehighlight">Twitter</a>
-                <a href="mailto:seeablenews@gmail.com" target="_blank" class="text-regular bold info-link pinkhighlight">Email</a>
+                <a href="mailto:theojolliffe@gmail.com" target="_blank" class="text-regular bold info-link pinkhighlight">Email</a>
             </div>
         </div>
     </div>
