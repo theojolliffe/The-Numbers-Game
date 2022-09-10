@@ -37,6 +37,7 @@
         let chart_data = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data.json`).then( res => res.json());
         chart_data = chart_data
 
+        console.log('chart_data', chart_data)
 
         // let carries_chart_json = await fetch(`${assets}/Teams/${teamName}/${date}/chart_data/progdist.json`).then( res => res.json());
         // let xg_chart_json = await fetch(`${assets}/Teams/${teamName}/Timeseries/Expected_npxG.json`).then( res => res.json());
@@ -355,6 +356,11 @@
                                 size: 24
                             }
                         }
+                    },
+                    scales: {
+                        y: {
+                            offset: true
+                        }
                     }
                 }
             });
@@ -378,6 +384,11 @@
                                 family: 'Helvetica Neue',
                                 size: 24
                             }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            offset: true
                         }
                     }
                 }
