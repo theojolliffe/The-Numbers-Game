@@ -1,0 +1,3541 @@
+[
+    {
+        "title": "Successuful passes by pass distance",
+        "type": "stackedbar",
+        "topic": "Successful passes",
+        "file": "Successful passes_stackedbar",
+        "data": {
+            "labels": [
+                "Tyrell Malacia",
+                "Victor LindeliPf",
+                "Harry Maguire",
+                "Casemiro",
+                "Fred",
+                "Diogo Dalot",
+                "Lisandro Martinez",
+                "Christian Eriksen",
+                "David de Gea",
+                "Cristiano Ronaldo",
+                "Bruno Fernandes",
+                "Anthony Elanga",
+                "Antony"
+            ],
+            "datasets": [
+                {
+                    "label": "5 - 15 yards",
+                    "data": [
+                        36,
+                        23,
+                        9,
+                        14,
+                        14,
+                        7,
+                        7,
+                        13,
+                        2,
+                        15,
+                        10,
+                        10,
+                        7
+                    ],
+                    "backgroundColor": "rgb(131, 219, 215)"
+                },
+                {
+                    "label": "15 - 30 yards",
+                    "data": [
+                        26,
+                        25,
+                        27,
+                        23,
+                        14,
+                        20,
+                        19,
+                        7,
+                        12,
+                        3,
+                        3,
+                        8,
+                        9
+                    ],
+                    "backgroundColor": "rgb(47, 126, 159)"
+                },
+                {
+                    "label": "Over 30 yards",
+                    "data": [
+                        5,
+                        7,
+                        12,
+                        9,
+                        8,
+                        7,
+                        8,
+                        6,
+                        7,
+                        2,
+                        6,
+                        0,
+                        1
+                    ],
+                    "backgroundColor": "rgb(229, 120, 115)"
+                }
+            ]
+        },
+        "section": "team"
+    },
+    {
+        "title": "Presses in each third of the field",
+        "type": "stackedbar",
+        "topic": "Presses",
+        "file": "Presses_stackedbar",
+        "data": {
+            "labels": [
+                "Fred",
+                "Casemiro",
+                "Anthony Elanga",
+                "Cristiano Ronaldo",
+                "Antony",
+                "Harry Maguire",
+                "Bruno Fernandes",
+                "Victor LindeliPf",
+                "Tyrell Malacia",
+                "Christian Eriksen",
+                "Diogo Dalot",
+                "Lisandro Martinez"
+            ],
+            "datasets": [
+                {
+                    "label": "Defensive",
+                    "data": [
+                        7,
+                        5,
+                        3,
+                        0,
+                        6,
+                        0,
+                        1,
+                        2,
+                        1,
+                        1,
+                        1,
+                        1
+                    ],
+                    "backgroundColor": "rgb(131, 219, 215)"
+                },
+                {
+                    "label": "Middle",
+                    "data": [
+                        6,
+                        7,
+                        6,
+                        3,
+                        7,
+                        7,
+                        1,
+                        2,
+                        2,
+                        1,
+                        0,
+                        1
+                    ],
+                    "backgroundColor": "rgb(47, 126, 159)"
+                },
+                {
+                    "label": "Attacking",
+                    "data": [
+                        5,
+                        4,
+                        6,
+                        11,
+                        1,
+                        0,
+                        3,
+                        1,
+                        1,
+                        1,
+                        1,
+                        0
+                    ],
+                    "backgroundColor": "rgb(229, 120, 115)"
+                }
+            ]
+        },
+        "section": "player"
+    },
+    {
+        "title": "Progressive carrying",
+        "type": "scatter",
+        "topic": "Progressive distance carried",
+        "file": "Progressive distance carried_scatter",
+        "data": {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "Manchester Utd players",
+                        "data": [
+                            {
+                                "Player": "Cristiano Ronaldo",
+                                "x": 53,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Anthony Elanga",
+                                "x": 105,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Antony",
+                                "x": 42,
+                                "y": 3,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Fred",
+                                "x": 53,
+                                "y": 2,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Christian Eriksen",
+                                "x": 71,
+                                "y": 5,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Bruno Fernandes",
+                                "x": 25,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Casemiro",
+                                "x": 55,
+                                "y": 6,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Tyrell Malacia",
+                                "x": 249,
+                                "y": 2,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Victor LindeliPf",
+                                "x": 81,
+                                "y": 4,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Harry Maguire",
+                                "x": 60,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Diogo Dalot",
+                                "x": 72,
+                                "y": 3,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Lisandro Martinez",
+                                "x": 101,
+                                "y": 4,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "David de Gea",
+                                "x": 52,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            }
+                        ],
+                        "backgroundColor": "#973D4C"
+                    },
+                    {
+                        "label": "Real Sociedad players",
+                        "data": [
+                            {
+                                "Player": "Takefusa Kubo",
+                                "x": 125,
+                                "y": 2,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Umar Sadiq",
+                                "x": 32,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Alexander Sorloth",
+                                "x": 84,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "David Silva",
+                                "x": 46,
+                                "y": 3,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Mohamed Ali Cho",
+                                "x": 52,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Mikel Merino",
+                                "x": 38,
+                                "y": 4,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Brais Mendez",
+                                "x": 26,
+                                "y": 3,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Martin Zubimendi",
+                                "x": 61,
+                                "y": 3,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Aihen Munoz",
+                                "x": 250,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Jon Pacheco",
+                                "x": 135,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Aritz Elustondo",
+                                "x": 139,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Andoni Gorosabel",
+                                "x": 28,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Alex Remiro",
+                                "x": 52,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            }
+                        ],
+                        "backgroundColor": "#C0C0C0"
+                    }
+                ]
+            },
+            "annotations": {
+                "label1": {
+                    "type": "label",
+                    "xValue": 249,
+                    "yValue": 2,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Tyrell Malacia"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                },
+                "label2": {
+                    "type": "label",
+                    "xValue": 105,
+                    "yValue": 0,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Anthony Elanga"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                }
+            }
+        },
+        "topic2": "Passes into final third",
+        "section": "team"
+    },
+    {
+        "title": "Progressive passing",
+        "type": "scatter",
+        "topic": "Progressive pass distance",
+        "file": "Progressive pass distance_scatter",
+        "data": {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "Manchester Utd players",
+                        "data": [
+                            {
+                                "Player": "Cristiano Ronaldo",
+                                "x": 22,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Anthony Elanga",
+                                "x": 76,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Antony",
+                                "x": 99,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Fred",
+                                "x": 227,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Christian Eriksen",
+                                "x": 166,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Bruno Fernandes",
+                                "x": 152,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Casemiro",
+                                "x": 369,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Tyrell Malacia",
+                                "x": 345,
+                                "y": 3,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Victor LindeliPf",
+                                "x": 224,
+                                "y": 2,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Harry Maguire",
+                                "x": 196,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Diogo Dalot",
+                                "x": 281,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Lisandro Martinez",
+                                "x": 253,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "David de Gea",
+                                "x": 268,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            }
+                        ],
+                        "backgroundColor": "#973D4C"
+                    },
+                    {
+                        "label": "Real Sociedad players",
+                        "data": [
+                            {
+                                "Player": "Takefusa Kubo",
+                                "x": 53,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Umar Sadiq",
+                                "x": 16,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Alexander Sorloth",
+                                "x": 15,
+                                "y": 2,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "David Silva",
+                                "x": 68,
+                                "y": 2,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Mohamed Ali Cho",
+                                "x": 14,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Mikel Merino",
+                                "x": 123,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Brais Mendez",
+                                "x": 88,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Martin Zubimendi",
+                                "x": 289,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Aihen Munoz",
+                                "x": 254,
+                                "y": 3,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Jon Pacheco",
+                                "x": 153,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Aritz Elustondo",
+                                "x": 325,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Andoni Gorosabel",
+                                "x": 206,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Alex Remiro",
+                                "x": 945,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            }
+                        ],
+                        "backgroundColor": "#C0C0C0"
+                    }
+                ]
+            },
+            "annotations": {
+                "label1": {
+                    "type": "label",
+                    "xValue": 369,
+                    "yValue": 0,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Casemiro"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                },
+                "label2": {
+                    "type": "label",
+                    "xValue": 345,
+                    "yValue": 3,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Tyrell Malacia"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                }
+            }
+        },
+        "topic2": "Carries into the final third",
+        "section": "team"
+    },
+    {
+        "title": "Blocks by Clearances",
+        "type": "scattercomp",
+        "topic": "Blocks",
+        "file": "Blocks_scattercomp",
+        "data": {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "Manchester Utd players",
+                        "data": [
+                            {
+                                "Player": "Anthony Elanga",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Antony",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Casemiro",
+                                "x": 6,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Cristiano Ronaldo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "David de Gea",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Fred",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Harry Maguire",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Tyrell Malacia",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Victor Lindelof",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Manchester Utd"
+                            }
+                        ],
+                        "backgroundColor": "#973D4C"
+                    },
+                    {
+                        "label": "Other players in the Europa Lg",
+                        "data": [
+                            {
+                                "Player": "Abdellah Zoubir",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Abdulkadir Omur",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Abel Ruiz",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Abou Ouattara",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Adam Lang",
+                                "x": 3,
+                                "y": 3,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Adam Marusic",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Adam Matthews",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Adama Traore",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Adrian Guerrero",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Adrien Truffert",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Aihen Munoz",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Aitor Ruibal",
+                                "x": 2,
+                                "y": 3,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Alban Lafont",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Albert Gronbaek Erlykke",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Albert Sambi Lokonga",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Aleksandar Dragovic",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Aleksandar Katai",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Aleksandr Golovin",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Alessio Romagnoli",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Alex Remiro",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Alexander Nubel",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Alexander Prass",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Alfons Sampsted",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Almoatasembellah Ali",
+                                "x": 4,
+                                "y": 2,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Altay Bayindir",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Amadou Dante",
+                                "x": 2,
+                                "y": 4,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Anastasios Bakasetas",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Anders Christiansen",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Anders Dreyer",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Andoni Gorosabel",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Andre Horta",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Andrea Belotti",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Andreas Bouchalakis",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Andrei Girotto",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Angel",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Anthony Moris",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Anton Nedyalkov",
+                                "x": 3,
+                                "y": 7,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Aritz Elustondo",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Armando Obispo",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Armel Junior Zohouri",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Arthur Theate",
+                                "x": 0,
+                                "y": 6,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Arttu Hoskonen",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Aslak Witry",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Attila Szalai",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Axel Disasi",
+                                "x": 0,
+                                "y": 7,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "B@hlul Mustafazad@",
+                                "x": 2,
+                                "y": 5,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Badavi Huseynov",
+                                "x": 1,
+                                "y": 7,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Balint Vecsei",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Baptiste Santamaria",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Bart Nieuwkoop",
+                                "x": 3,
+                                "y": 3,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Benoit Badiashile",
+                                "x": 1,
+                                "y": 4,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Bernard Tekpetey",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Bledian Krasniqi",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Blerim Dzemaili",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Brais Mendez",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Brandon Barker",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Brice Wembangomo",
+                                "x": 3,
+                                "y": 2,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Bruno Felipe Souza da Silva",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Bruno Rodrigues",
+                                "x": 1,
+                                "y": 4,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Bryan Cristante",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Caio Henrique Oliveira Silva",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Cauly Oliveira Souza",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Cedric Badolo",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Charalampos Charalampous",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Chris Smalling",
+                                "x": 3,
+                                "y": 5,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Christian Burgess",
+                                "x": 2,
+                                "y": 11,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Christian Gunter",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Christopher Trimmel",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Ciro Immobile",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Claudio Bravo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Cody Gakpo",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Conor Hazard",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Crespo",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Danilho Doekhi",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Danilo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Danilo Cataldi",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Dante Vanzeir",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "David Affengruber",
+                                "x": 2,
+                                "y": 3,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "David Browne",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "David Hancko",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "David Silva",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Denes Dibusz",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Dennis Appiah",
+                                "x": 4,
+                                "y": 2,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Dennis Hadzikadunic",
+                                "x": 1,
+                                "y": 6,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Denys Harmash",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Diego Lainez",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Diego Rossi",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Eddie Nketiah",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Elseid Hysaj",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Emanuel Emegha",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Endre Botka",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Erik Sviatchenko",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Evander",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Evann Guessand",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Ezgjan Alioski",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Fabiano",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Fabio Vieira",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Felipe Anderson",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Ferdi Kadioglu",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Fidan Aliti",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Flavien Tait",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Frederik Ronnow",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Gabriel Dos Santos",
+                                "x": 1,
+                                "y": 7,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Gaby Kiki",
+                                "x": 3,
+                                "y": 5,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Gara Garayev",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Genki Haraguchi",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "German Pezzella",
+                                "x": 2,
+                                "y": 8,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Gernot Trauner",
+                                "x": 3,
+                                "y": 2,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Gianluca Mancini",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Granit Xhaka",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Gregory Wuthrich",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Guelor Kanga",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Guillermo Maripan",
+                                "x": 1,
+                                "y": 8,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Gustav Isaksen",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Gustavo Henrique",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Hamari Traore",
+                                "x": 0,
+                                "y": 4,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Henrik Dalsgaard",
+                                "x": 0,
+                                "y": 7,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Henry Wingo",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Heorhiy Bushchan",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Hrvoje Milicevic",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Hugo Vetlesen",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Hwang Ui-jo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Ibrahim Rasheed",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Ibrahim Sangare",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Ignatius Ganago",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Imad Faraj",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Ismael Diawara",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Ismael Kandouss",
+                                "x": 1,
+                                "y": 5,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Ismael Saibari",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Ivan Provedel",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Ivan Trickovski",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Iyayi Atiemwen",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Jakub Piotrowski",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Jan Lecjaks",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Janik Haberer",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Javairo Dilrosun",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Jens Stryger Larsen",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Jeong Woo-yeong",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Jo Inge Berget",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Joao Pedro",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Joaquin",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Joe Rodon",
+                                "x": 0,
+                                "y": 5,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Joel Mugisha",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Joey Veerman",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Jon Gorenc Stankovic",
+                                "x": 1,
+                                "y": 6,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Jon Pacheco",
+                                "x": 3,
+                                "y": 7,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Jonas Lossl",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Jonathan Okita",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Jordan Teze",
+                                "x": 0,
+                                "y": 4,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Jorg Siebenhandl",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Jose Rodriguez",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Joshua King",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Juan Miranda",
+                                "x": 3,
+                                "y": 2,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Jukka Raitala",
+                                "x": 1,
+                                "y": 5,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Juninho",
+                                "x": 0,
+                                "y": 5,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Justin Bijlow",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Jusuf Gazibegovic",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Kady Borges",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Kamaldeen Sulemana",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Kenan Piric",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Kevin Behrens",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Kieran Tierney",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Kiliann Sildillia",
+                                "x": 5,
+                                "y": 3,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Kiril Despodov",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Kostas Manolas",
+                                "x": 0,
+                                "y": 7,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Kristoffer Zachariassen",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Lasse Nielsen",
+                                "x": 2,
+                                "y": 4,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Lindrit Kamberi",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Loic Lapoussin",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Lorenzo Pellegrini",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Lovro Majer",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Luan Peres Petroni",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Lucas Lingman",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Ludovic Blas",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Luis Alberto",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Luis Gustavo Ledes",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Luiz Henrique",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "M@h@mm@d@liyev Sahruddin Maqomedovic",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Maksym Koval",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Malik Abubakari",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Marc Bartra",
+                                "x": 3,
+                                "y": 5,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Marcus Pedersen",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Mario Gila",
+                                "x": 4,
+                                "y": 1,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Marius Hoibraten",
+                                "x": 3,
+                                "y": 4,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Marius Lode",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Mark Flekken",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Marko Jankovic",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Marko Vesovic",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Marquinhos",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Martin Olsson",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Martin Zubimendi",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Martinelli",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Matheus",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Matias Vecino",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Mats Knoester",
+                                "x": 3,
+                                "y": 7,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Matt Turner",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Matthias Ginter",
+                                "x": 0,
+                                "y": 4,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Mattia Zaccagni",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Maxi Gomez",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Maximilian Eggestein",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Mikel Merino",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Milan Borjan",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Milan Rodic",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Mile Svilar",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Mirlind Kryeziu",
+                                "x": 1,
+                                "y": 8,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Miro Tenho",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Mix Diskerud",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Mohamed Buya Turay",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Mohamed Camara",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Moreto Cassama",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Mostafa Mohamed",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Mouhamed Diop",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Moussa Kyabou",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Muhamed Besic",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Muhammet Taha Tepe",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Mykola Shaparenko",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Mykyta Burda",
+                                "x": 1,
+                                "y": 5,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Nassim Boujellab",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Nemanja Matic",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Nemanja Miletic",
+                                "x": 0,
+                                "y": 5,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Nemanja Milunovic",
+                                "x": 4,
+                                "y": 9,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Nenad Tomovic",
+                                "x": 4,
+                                "y": 3,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Nicola Zalewski",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Nicolas Hofler",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Nicolas Pallois",
+                                "x": 2,
+                                "y": 3,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Nikita Haikin",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Niklas Moisander",
+                                "x": 3,
+                                "y": 4,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Niko Giesselmann",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Nikola Boranijasevic",
+                                "x": 3,
+                                "y": 2,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Nikolas Panayiotou",
+                                "x": 1,
+                                "y": 6,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Nils Petersen",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Nuno Sequeira",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Oier Sanjurjo",
+                                "x": 2,
+                                "y": 6,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Ole Selnaes",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Oleg Reabciuk",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Oleksandr Syrota",
+                                "x": 1,
+                                "y": 8,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Olivier Verdon",
+                                "x": 1,
+                                "y": 5,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Omri Altman",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Orkun Kokcu",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Osman Bukari",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Owusu Kwabena",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Panagiotis Retsos",
+                                "x": 0,
+                                "y": 4,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Pape Abou Cisse",
+                                "x": 3,
+                                "y": 7,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Patrick Berg",
+                                "x": 2,
+                                "y": 3,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Patrick Kpozo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Patrik Walemark",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Paul Akouokou",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Paul Jaeckel",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Paulinho",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Paulo Dybala",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Paulo Oliveira",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Pedro Chirivella",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Pep Biel",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Philipp Lienhart",
+                                "x": 3,
+                                "y": 2,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Philipp Max",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Phillipp Mwene",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Pierre Kunde",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Pione Sisto",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Pipa",
+                                "x": 6,
+                                "y": 5,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Pyry Soiri",
+                                "x": 5,
+                                "y": 0,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Quentin Merlin",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Quilindschy Hartman",
+                                "x": 7,
+                                "y": 1,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Quinten Timber",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Ramil Sheydayev",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Rani Khedira",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Ricardo Horta",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Ritsu Doan",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Rob Holding",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Robin Knoche",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Rodrigo",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Roger Ibanez",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Samuel Moutoussamy",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Samy Mmaee",
+                                "x": 1,
+                                "y": 11,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Santeri Hostikka",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Santeri Vaananen",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Sekou Sanogo",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Senne Lynen",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Sergio Padt",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Serhiy Sydorchuk",
+                                "x": 3,
+                                "y": 4,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Sheraldo Becker",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Show",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Siebe Van Der Heyden",
+                                "x": 3,
+                                "y": 5,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Slavoljub Srnic",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Sory Kaba",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Stefan Hierlander",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Stefano Denswil",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Steve Mandanda",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Stjepan Radeljic",
+                                "x": 5,
+                                "y": 3,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Strahinja Erakovic",
+                                "x": 2,
+                                "y": 4,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Takefusa Kubo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Takehiro Tomiyasu",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Teddy Teuma",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Thiago",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Tokmac Nguen",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Tomas Vaclik",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Tomasz Kedziora",
+                                "x": 1,
+                                "y": 4,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Tomi Horvat",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Toral Bayramov",
+                                "x": 5,
+                                "y": 1,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Tosin Aiyegun",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Trezeguet",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Ulrik Saltnes",
+                                "x": 5,
+                                "y": 1,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Vanderson",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Victor Boniface",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Victor Olatunji",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Viktor Tsyhankov",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Vincenzo Grifo",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Vitaliy Buyalskyi",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Vitinha",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Vladyslav Kabayev",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Walter Benitez",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "William Carvalho",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "William Vick",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Willian Arao",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Willian Jose",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Wissam Ben Yedder",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Xavi Simons",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Yanick Brecher",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Yorbe Vertessen",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Zeki Celik",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "Roma"
+                            }
+                        ],
+                        "backgroundColor": "#C0C0C0"
+                    }
+                ]
+            },
+            "annotations": {
+                "label1": {
+                    "type": "label",
+                    "xValue": 6,
+                    "yValue": 1,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Casemiro"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                },
+                "label2": {
+                    "type": "label",
+                    "xValue": 3,
+                    "yValue": 0,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Fred"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                }
+            }
+        },
+        "subtitle": "During Champions League matches",
+        "topic2": "Clearances",
+        "section": "player",
+        "meta": [
+            "",
+            ""
+        ]
+    },
+    {
+        "title": "Aerial duels lost by Dribbled past",
+        "type": "scattercomp",
+        "topic": "Aerial duels lost",
+        "file": "Aerial duels lost_scattercomp",
+        "data": {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "Manchester Utd players",
+                        "data": [
+                            {
+                                "Player": "Casemiro",
+                                "x": 5,
+                                "y": 3,
+                                "Team": "Manchester Utd"
+                            },
+                            {
+                                "Player": "Fred",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Manchester Utd"
+                            }
+                        ],
+                        "backgroundColor": "#973D4C"
+                    },
+                    {
+                        "label": "Other players in the Europa Lg",
+                        "data": [
+                            {
+                                "Player": "Abdulkadir Omur",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Adama Traore",
+                                "x": 4,
+                                "y": 0,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Adrian Guerrero",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Albert Sambi Lokonga",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Aleksandar Katai",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Alexander Prass",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Almoatasembellah Ali",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Anastasios Bakasetas",
+                                "x": 5,
+                                "y": 3,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Anders Christiansen",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Anders Dreyer",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Andre Horta",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Andreas Bouchalakis",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Balint Vecsei",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Baptiste Santamaria",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Bledian Krasniqi",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Blerim Dzemaili",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Brais Mendez",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Bryan Cristante",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Cauly Oliveira Souza",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Cedric Badolo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Charalampos Charalampous",
+                                "x": 2,
+                                "y": 3,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Crespo",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Danilo Cataldi",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "David Silva",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Diego Lainez",
+                                "x": 3,
+                                "y": 1,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Evander",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Midtjylland"
+                            },
+                            {
+                                "Player": "Evann Guessand",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Fabio Vieira",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Flavien Tait",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Gara Garayev",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Genki Haraguchi",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Granit Xhaka",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Arsenal"
+                            },
+                            {
+                                "Player": "Guelor Kanga",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Hugo Vetlesen",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Ibrahim Sangare",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Ignatius Ganago",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Ivan Trickovski",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Iyayi Atiemwen",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Jakub Piotrowski",
+                                "x": 3,
+                                "y": 2,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Janik Haberer",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Javairo Dilrosun",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Jeong Woo-yeong",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Jo Inge Berget",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Malmö"
+                            },
+                            {
+                                "Player": "Joaquin",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Joey Veerman",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "PSV Eindhoven"
+                            },
+                            {
+                                "Player": "Jon Gorenc Stankovic",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Jonathan Okita",
+                                "x": 5,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Jose Rodriguez",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Kady Borges",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Kristoffer Zachariassen",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Lorenzo Pellegrini",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Lovro Majer",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Rennes"
+                            },
+                            {
+                                "Player": "Lucas Lingman",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Ludovic Blas",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Luis Alberto",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Luis Gustavo Ledes",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Marko Jankovic",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Qarabağ Ağdam"
+                            },
+                            {
+                                "Player": "Martin Zubimendi",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Matias Vecino",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Lazio"
+                            },
+                            {
+                                "Player": "Maximilian Eggestein",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Mikel Merino",
+                                "x": 3,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Mix Diskerud",
+                                "x": 4,
+                                "y": 1,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Mohamed Camara",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Monaco"
+                            },
+                            {
+                                "Player": "Moreto Cassama",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "AC Omonia"
+                            },
+                            {
+                                "Player": "Mouhamed Diop",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Moussa Kyabou",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Sheriff Tiraspol"
+                            },
+                            {
+                                "Player": "Muhamed Besic",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Mykola Shaparenko",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Nassim Boujellab",
+                                "x": 4,
+                                "y": 1,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Nemanja Matic",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Nicolas Hofler",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Oier Sanjurjo",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "AÉK Lárnaka"
+                            },
+                            {
+                                "Player": "Ole Selnaes",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Zürich"
+                            },
+                            {
+                                "Player": "Orkun Kokcu",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Osman Bukari",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Patrick Berg",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Paul Akouokou",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Paulo Dybala",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Roma"
+                            },
+                            {
+                                "Player": "Pedro Chirivella",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Pierre Kunde",
+                                "x": 0,
+                                "y": 3,
+                                "Team": "Olympiacos"
+                            },
+                            {
+                                "Player": "Quinten Timber",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Feyenoord"
+                            },
+                            {
+                                "Player": "Rani Khedira",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Ricardo Horta",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Braga"
+                            },
+                            {
+                                "Player": "Ritsu Doan",
+                                "x": 2,
+                                "y": 3,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Samuel Moutoussamy",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Nantes"
+                            },
+                            {
+                                "Player": "Santeri Hostikka",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Santeri Vaananen",
+                                "x": 1,
+                                "y": 3,
+                                "Team": "HJK"
+                            },
+                            {
+                                "Player": "Sekou Sanogo",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Red Star"
+                            },
+                            {
+                                "Player": "Senne Lynen",
+                                "x": 1,
+                                "y": 2,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Serhiy Sydorchuk",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "Sheraldo Becker",
+                                "x": 1,
+                                "y": 0,
+                                "Team": "Union Berlin"
+                            },
+                            {
+                                "Player": "Show",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Ludogorets"
+                            },
+                            {
+                                "Player": "Stefan Hierlander",
+                                "x": 2,
+                                "y": 2,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Takefusa Kubo",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "Real Sociedad"
+                            },
+                            {
+                                "Player": "Teddy Teuma",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Union SG"
+                            },
+                            {
+                                "Player": "Tokmac Nguen",
+                                "x": 2,
+                                "y": 1,
+                                "Team": "Ferencváros"
+                            },
+                            {
+                                "Player": "Tomi Horvat",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Sturm Graz"
+                            },
+                            {
+                                "Player": "Trezeguet",
+                                "x": 4,
+                                "y": 0,
+                                "Team": "Trabzonspor"
+                            },
+                            {
+                                "Player": "Ulrik Saltnes",
+                                "x": 0,
+                                "y": 1,
+                                "Team": "Bodø/Glimt"
+                            },
+                            {
+                                "Player": "Vincenzo Grifo",
+                                "x": 0,
+                                "y": 2,
+                                "Team": "Freiburg"
+                            },
+                            {
+                                "Player": "Vitaliy Buyalskyi",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Dynamo Kyiv"
+                            },
+                            {
+                                "Player": "William Carvalho",
+                                "x": 0,
+                                "y": 0,
+                                "Team": "Betis"
+                            },
+                            {
+                                "Player": "Willian Arao",
+                                "x": 1,
+                                "y": 1,
+                                "Team": "Fenerbahçe"
+                            },
+                            {
+                                "Player": "Xavi Simons",
+                                "x": 2,
+                                "y": 0,
+                                "Team": "PSV Eindhoven"
+                            }
+                        ],
+                        "backgroundColor": "#C0C0C0"
+                    }
+                ]
+            },
+            "annotations": {
+                "label1": {
+                    "type": "label",
+                    "xValue": 5,
+                    "yValue": 3,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Casemiro"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                },
+                "label2": {
+                    "type": "label",
+                    "xValue": 0,
+                    "yValue": 0,
+                    "xAdjust": -30,
+                    "yAdjust": 30,
+                    "backgroundColor": "rgba(280,280,280,0.5)",
+                    "content": [
+                        "Fred"
+                    ],
+                    "textAlign": "start",
+                    "callout": {
+                        "display": "true"
+                    }
+                }
+            }
+        },
+        "subtitle": "During Champions League matches",
+        "topic2": "Dribbled past",
+        "section": "player",
+        "meta": [
+            "",
+            " among players in his position"
+        ]
+    },
+    {
+        "title": "Non-penalty expected goals by game",
+        "type": "timeseries",
+        "topic": "Non-penalty expected goals",
+        "file": "Non-penalty expected goals_timeseries",
+        "data": {
+            "labels": [
+                "2022-08-07",
+                "2022-08-13",
+                "2022-08-22",
+                "2022-08-27",
+                "2022-09-01",
+                "2022-09-04",
+                "2022-09-08"
+            ],
+            "datasets": [
+                {
+                    "label": "Bruno Fernandes",
+                    "data": [
+                        0.2,
+                        0.1,
+                        0.1,
+                        0.6,
+                        0,
+                        0.3,
+                        0
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#0E6BA0",
+                    "backgroundColor": "#0E6BA0"
+                },
+                {
+                    "label": "Christian Eriksen",
+                    "data": [
+                        0.1,
+                        0.2,
+                        0.1,
+                        0.4,
+                        0.1,
+                        0.1,
+                        0
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#30C0D2",
+                    "backgroundColor": "#30C0D2"
+                },
+                {
+                    "label": "Cristiano Ronaldo",
+                    "data": [
+                        0.1,
+                        0.2,
+                        0,
+                        0,
+                        0,
+                        0.3,
+                        0.3
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#973D4C",
+                    "backgroundColor": "#973D4C"
+                }
+            ]
+        },
+        "section": "team",
+        "players": [
+            "Bruno Fernandes",
+            "Christian Eriksen",
+            "Cristiano Ronaldo"
+        ]
+    },
+    {
+        "title": "Expected assists by game",
+        "type": "timeseries",
+        "topic": "Expected assists",
+        "file": "Expected assists_timeseries",
+        "data": {
+            "labels": [
+                "2022-08-07",
+                "2022-08-13",
+                "2022-08-22",
+                "2022-08-27",
+                "2022-09-01",
+                "2022-09-04",
+                "2022-09-08"
+            ],
+            "datasets": [
+                {
+                    "label": "Bruno Fernandes",
+                    "data": [
+                        0.6,
+                        0,
+                        0.4,
+                        0,
+                        0.1,
+                        0.2,
+                        0.2
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#0E6BA0",
+                    "backgroundColor": "#0E6BA0"
+                },
+                {
+                    "label": "Christian Eriksen",
+                    "data": [
+                        0.1,
+                        0,
+                        0,
+                        0.2,
+                        0,
+                        1,
+                        0
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#30C0D2",
+                    "backgroundColor": "#30C0D2"
+                },
+                {
+                    "label": "Diogo Dalot",
+                    "data": [
+                        0.1,
+                        0.1,
+                        0.1,
+                        0.3,
+                        0,
+                        0.1,
+                        0
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#973D4C",
+                    "backgroundColor": "#973D4C"
+                }
+            ]
+        },
+        "section": "team",
+        "players": [
+            "Bruno Fernandes",
+            "Christian Eriksen",
+            "Diogo Dalot"
+        ]
+    },
+    {
+        "title": "Successful dribbles by game",
+        "type": "timeseries",
+        "topic": "Successful dribbles",
+        "file": "Successful dribbles_timeseries",
+        "data": {
+            "labels": [
+                "2022-08-07",
+                "2022-08-13",
+                "2022-08-22",
+                "2022-08-27",
+                "2022-09-01",
+                "2022-09-04",
+                "2022-09-08"
+            ],
+            "datasets": [
+                {
+                    "label": "Tyrell Malacia",
+                    "data": [
+                        0,
+                        0,
+                        0,
+                        2,
+                        0,
+                        1,
+                        2
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#0E6BA0",
+                    "backgroundColor": "#0E6BA0"
+                },
+                {
+                    "label": "Diogo Dalot",
+                    "data": [
+                        0,
+                        1,
+                        0,
+                        3,
+                        0,
+                        1,
+                        0
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#30C0D2",
+                    "backgroundColor": "#30C0D2"
+                },
+                {
+                    "label": "Bruno Fernandes",
+                    "data": [
+                        1,
+                        0,
+                        0,
+                        1,
+                        1,
+                        0,
+                        1
+                    ],
+                    "fill": "false",
+                    "tension": "0.3",
+                    "borderColor": "#973D4C",
+                    "backgroundColor": "#973D4C"
+                }
+            ]
+        },
+        "section": "team",
+        "players": [
+            "Tyrell Malacia",
+            "Diogo Dalot",
+            "Bruno Fernandes"
+        ]
+    }
+]

@@ -1,11 +1,10 @@
-Player,2022-08-06,2022-08-15,2022-08-22,2022-08-27,2022-08-31,2022-09-03
-Luis Diaz,1,2,3,2,4,2
-Harvey Elliott,3,1,1,1,5,1
-Trent Alexander-Arnold,0,0,1,0,1,1
-Mohamed Salah,2,1,4,1,4,0
-Fabio Carvalho,0,0,1,1,0,0
-Fabinho,0,0,0,0,0,0
-James Milner,0,0,3,0,0,0
-Andrew Robertson,1,0,0,1,0,0
-Virgil van Dijk,0,0,0,0,0,0
-Alisson,0,0,0,0,0,0
+Player,2022-08-06,2022-08-15,2022-08-22,2022-08-27,2022-08-31,2022-09-03,2022-09-07
+Luis Diaz,1,2,3,2,4,2,3.0
+Trent Alexander-Arnold,0,0,1,0,1,1,0.0
+Mohamed Salah,2,1,4,1,4,0,0.0
+Fabinho,0,0,0,0,0,0,0.0
+James Milner,0,0,3,0,0,0,0.0
+Andrew Robertson,1,0,0,1,0,0,0.0
+Virgil van Dijk,0,0,0,0,0,0,0.0
+Alisson,0,0,0,0,0,0,0.0
+Harvey Elliott,3,1,1,1,5,1,
