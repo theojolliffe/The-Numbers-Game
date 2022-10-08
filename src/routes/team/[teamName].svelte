@@ -395,6 +395,7 @@
             });
         }
     });
+    console.log('content', content.data[0])
 
     let content_body = content.data.slice(1)
     let content_title = content.data[0].tweet.replace(/([\u2700-\u27BF]|[\uE000-\uF8FF]|\uD83C[\uDC00-\uDFFF]|\uD83D[\uDC00-\uDFFF]|[\u2011-\u26FF]|\uD83E[\uDD10-\uDDFF])/g, '')
@@ -569,6 +570,7 @@
 		line-height: initial;
 		font-size: large;
         color: #434343;
+        color: black;
         line-height: 1.4;
         font-weight: 300;
         cursor: pointer;
@@ -703,8 +705,8 @@
 
 
     #head-cont {
-        background: black;
-        color: white;
+        background: #a8b8ca;
+        color: black;
         width: 100vw;
         margin: 0 0 50px -16px;
         /* height: 220px; */
@@ -722,6 +724,7 @@
         }
         .tweets {
             font-size: medium;
+            color: black;
         }
         h2 {
             font-size: 8vw;

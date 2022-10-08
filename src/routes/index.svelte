@@ -5,8 +5,8 @@
         let content_list = await fetch(`${assets}/content_list.json`).then( res => res.json());
 
         return {
-			props: { content_list }
-		}
+                props: { content_list }
+            }
     }
 </script>
 
@@ -29,6 +29,15 @@
         }
         return id
     }
+    function isOld(date) {
+        let old_date = new Date('2022-09-01')
+        let our_date = new Date(date)
+        if (our_date < old_date){
+            return '/team_e/'
+        } else {
+            return '/team/'
+        }
+    }
 </script>
 
 <body class="body2">
@@ -40,7 +49,7 @@
     <div class='grid-container'>
 
         {#each content_list as misc, i}
-            <a sveltekit:prefetch href={ '/team/' + teams.find(d => d.name == misc.team)['id'] + '>' + misc.date }>
+            <a sveltekit:prefetch href={ isOld(misc.date) + teams.find(d => d.name == misc.team)['id'] + '>' + misc.date }>
                 <div class="team-div" class:active={$page.url.pathname === '/'+teams.find(d => d.name == misc.team)['id']}>
                     <div class="row number">
                         {addZeros(misc.id+1)}
@@ -180,7 +189,7 @@
 	}
 
 	.team-div {
-		background-color: rgba(255, 255, 255, 0.8);
+		/* background-color: rgba(255, 255, 255, 0.8); */
 		text-align: left;
 		padding: 20px 0;
         font-family: system-ui;

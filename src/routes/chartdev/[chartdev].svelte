@@ -2,6 +2,7 @@
     // import * as json_content from '../content.json';
     // import { teams } from '../fb-utils'
 
+
     // let data = json_content.default
     // import { base, assets } from "$app/paths";
     // export async function load({ params, fetch }) {
@@ -33,54 +34,152 @@
     import annotationPlugin from 'chartjs-plugin-annotation';
     Chart.register(annotationPlugin);
     import { onMount } from 'svelte';
-    
 
-	let some_chart;
+    // import data from '/Users/theojolliffe/Documents/The Numbers Game/data-processing/ws_top_forward.json'
+    import data from './buildup.json'
 
-    let chart_data = {
-        'data': {
-            'datasets': [
-                {
-                    'label': 'Manchester City',
-                    'data': [
-                        {'Player': 'Bernardo Silva', 'x': 1.0, 'y': 0.4, 'Team': 'Manchester City'},
-                        {'Player': 'Ederson', 'x': 2.0, 'y': 0.7, 'Team': 'Manchester City'},
-                        {'Player': 'Erling Haaland', 'x': 2.5, 'y': 0.5, 'Team': 'Manchester City'}
-                    ]
-                }
-            ]
-        }}
+    let some_chart
+    console.log('data', data)
 
-    console.log('data', chart_data)
+    let xadj = 7
+    let yadj = 25
+    let ratio = 6
+    let wid_rat = 0.65
 
-    const plugin = {
+    let p_len_ya = 100
+    let p_wid_ya  = 65 
+
+    let p_len = p_len_ya*ratio
+    let p_wid = p_wid_ya*ratio
+
+    const pitch = {
         id: 'custom_canvas_background_color',
         beforeDraw: (chart) => {
             const {ctx} = chart;
             ctx.save();
 
-            ctx.strokeStyle = 'white';
-            let xadj = 7
-            let yadj = 8
+            ctx.strokeStyle = '#c0c0c080';
+
+            let box = 0.16
+            let six = 0.05
 
             ctx.beginPath();
             ctx.moveTo(0+xadj, 0+yadj);
-            ctx.lineTo(600+xadj, 0+yadj);
-            ctx.lineTo(600+xadj, 420+yadj);
-            ctx.lineTo(0+xadj, 420+yadj);
+            ctx.lineTo(p_len+xadj, 0+yadj);
+            ctx.lineTo(p_len+xadj, p_wid+yadj);
+            ctx.lineTo(0+xadj, p_wid+yadj);
             ctx.lineTo(0+xadj, 0+yadj);
 
-            ctx.lineTo(300+xadj, 0+yadj);
-            ctx.lineTo(300+xadj, 420+yadj);
-            
-            ctx.stroke();
+            ctx.lineTo(0.5*p_len+xadj, 0+yadj);
+            ctx.lineTo(0.5*p_len+xadj, p_wid+yadj);
 
+            ctx.moveTo(0.5*p_len+xadj, 0.5*p_wid+yadj);
+            const angle = Math.PI / 180;
+            ctx.arc(0.5*p_len+xadj, 0.5*p_wid+yadj, 50, angle*90, angle*91, true);
+
+            ctx.moveTo(0+xadj, 0.2*p_wid+yadj);
+            ctx.lineTo(box*p_len+xadj, 0.2*p_wid+yadj);
+            ctx.lineTo(box*p_len+xadj, 0.8*p_wid+yadj);
+            ctx.lineTo(0+xadj, 0.8*p_wid+yadj);
+
+            ctx.moveTo(0+xadj, 0.35*p_wid+yadj);
+            ctx.lineTo(six*p_len+xadj, 0.35*p_wid+yadj);
+            ctx.lineTo(six*p_len+xadj, 0.65*p_wid+yadj);
+            ctx.lineTo(0.0*p_len+xadj, 0.65*p_wid+yadj);
+
+            ctx.moveTo(p_len+xadj, 0.35*p_wid+yadj);
+            ctx.lineTo((1-six)*p_len+xadj, 0.35*p_wid+yadj);
+            ctx.lineTo((1-six)*p_len+xadj, 0.65*p_wid+yadj);
+            ctx.lineTo(p_len+xadj, 0.65*p_wid+yadj);
+            ctx.lineTo(p_len+xadj, 0.8*p_wid+yadj);
+            ctx.lineTo((1-box)*p_len+xadj, 0.8*p_wid+yadj);
+            ctx.lineTo((1-box)*p_len+xadj, 0.2*p_wid+yadj);
+            ctx.lineTo(p_len+xadj, 0.2*p_wid+yadj);
+
+            ctx.stroke();
             ctx.globalCompositeOperation = 'destination-over';
-            ctx.fillStyle = 'darkGreen';
+            ctx.fillStyle = '#001e3d';
             ctx.fillRect(0, 0, chart.width, chart.height);
             ctx.restore();
         }
     };
+    const passes = {
+        id: 'custom_canvas_foreground',
+        afterDraw: (chart) => {
+
+            const {ctx} = chart;
+            ctx.save();
+
+            ctx.strokeStyle = 'pink';
+            ctx.lineWidth = 5;
+            ctx.lineCap = 'round';
+
+            let move_name = {
+                start: {
+                    x: 10,
+                    y: -10
+                },
+                end: {
+                    x: 10,
+                    y: 20
+                }
+            }
+
+            function s_x(c, pd) {
+                return ratio*c+xadj + move_name[pd]['x']
+            }
+            function s_y(c, pd) {
+                return p_wid-(wid_rat*ratio*c)+yadj + move_name[pd]['y']
+            }
+
+            data.reverse()
+            for (const d of data) {
+
+                // pass direction
+                let pd = (d['y'] - d['endY'])>0? 'start' : 'end'
+
+                console.log('d', d)
+
+                ctx.fillStyle = 'silver';
+                ctx.font = "14px Arial";
+                ctx.textAlign = pd;
+
+                ctx.shadowOffsetX = 2;
+                ctx.shadowOffsetY = 2;
+                ctx.shadowColor = "#001e3d";
+                ctx.shadowBlur = 1;
+                ctx.fillText(d['player'].split(" ")[d['player'].split(" ").length-1], s_x(d['x'], pd), s_y(d['y'], pd));
+
+                // linear gradient from start to end of line
+                var grad= ctx.createLinearGradient(ratio*d['x']+xadj, p_wid-(wid_rat*ratio*d['y'])+yadj, ratio*d['endX']+xadj, p_wid-(wid_rat*ratio*d['endY'])+yadj);
+                grad.addColorStop(0, "#001e3d10");
+                grad.addColorStop(1, "pink");
+
+                if (d['endX'] == 100.5) {
+                    grad= ctx.createLinearGradient(ratio*d['x']+xadj, p_wid-(wid_rat*ratio*d['y'])+yadj, ratio*d['endX']+xadj, p_wid-(wid_rat*ratio*d['endY'])+yadj);
+                    grad.addColorStop(0, "#001e3d90");
+                    grad.addColorStop(0.2, "pink");
+                }
+
+                ctx.beginPath();
+
+                ctx.moveTo(ratio*d['x']+xadj, p_wid-(wid_rat*ratio*d['y'])+yadj );
+                ctx.strokeStyle = grad;
+
+                // ctx.lineTo(ratio*d['endX']+xadj, p_wid-(wid_rat*ratio*d['endY'])+yadj );
+
+                ctx.bezierCurveTo(ratio*d['x']+xadj, p_wid-(wid_rat*ratio*d['y'])+yadj, 1.04*ratio*d['x']+xadj, 1.01*p_wid-(wid_rat*ratio*d['y'])+yadj, ratio*d['endX']+xadj, p_wid-(wid_rat*ratio*d['endY'])+yadj);
+
+                ctx.stroke();
+
+            }
+
+            
+            ctx.restore();
+
+        }
+
+    }
 
 	onMount(async (promise) => {
         // Chart
@@ -88,7 +187,7 @@
         var chart_new = new Chart(ctx, {
             type: 'scatter',
             // data: chart_data.data,
-            plugins: [plugin],
+            plugins: [pitch, passes],
             options: {
                 aspectRatio: 1.4,
                 pointRadius: 8,

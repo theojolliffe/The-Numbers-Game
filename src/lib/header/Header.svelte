@@ -2,7 +2,7 @@
     <div class="top-50">
         <a sveltekit:prefetch href="/">
             <div class="text-semi">
-                The Numbers Game
+                The Sport Analytic
             </div>
         </a>
         <div class="div-block-107">
@@ -22,6 +22,8 @@
 
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+
     .body2 {
         font-family: system-ui;
         color: #000;
@@ -52,6 +54,7 @@
         font-size: 48px;
         line-height: 1;
         font-weight: 400;
+        font-family: 'Alkalami', serif;
     }
     .text-regular {
         font-size: 14px;
