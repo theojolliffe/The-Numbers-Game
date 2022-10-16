@@ -14,7 +14,7 @@
     </div>
     <div class="flex">
         <div class="text-regular">
-            This is an experiment in data journalism, using a machine learning model to generate articles based on football data. I am currently using a Text-to-Text transformer model (called T5) which can be trained to turn data into into natural language. The project is in an early stage of development and will contain errors. Please verify accuracy with <a class="source" href="https://fbref.com/en/">FBREF</a>, the original data source, before sharing content.
+            The content on this site is created by the automated analysis of data from FBREF. This data is then passed through open-source large language models available from the <a class="source" href="https://huggingface.co/">Hugging Face library</a>. The project is in an early stage of development and may contain errors. Please verify accuracy with <a class="source" href="https://fbref.com/en/">FBREF</a>, the original data source, before sharing content.
             <br>
         </div>
     </div>

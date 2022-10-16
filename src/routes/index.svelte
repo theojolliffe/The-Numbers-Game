@@ -1,9 +1,7 @@
 <script context="module">
     import { base, assets } from "$app/paths";
     export async function load({ params, fetch }) {
-
         let content_list = await fetch(`${assets}/content_list.json`).then( res => res.json());
-
         return {
                 props: { content_list }
             }

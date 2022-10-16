@@ -122,7 +122,6 @@
                 });
         }
 
-
         if (!content.data.every( (e) => { return (e.image===undefined)? true : !e.image.includes('Presses_stacked.png') })) {
             let ctxpress = PressStackedBar.getContext('2d');
             var chart = new Chart(ctxpress, {
@@ -705,7 +704,7 @@
 
 
     #head-cont {
-        background: #a8b8ca;
+        background: #b0c6df;
         color: black;
         width: 100vw;
         margin: 0 0 50px -16px;

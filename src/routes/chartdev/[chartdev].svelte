@@ -38,6 +38,7 @@
     // import data from '/Users/theojolliffe/Documents/The Numbers Game/data-processing/ws_top_forward.json'
     import data from './buildup.json'
 
+    let some_chart_bar
     let some_chart
     console.log('data', data)
 
@@ -194,6 +195,58 @@
                 pointHoverRadius: 11
             }
         });
+
+
+        // BAR
+        const labels = ['a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2','a3', 'b3', 'c3', 'd3', 'e3', 'f3'];
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Tottenham',
+                data: [81, 80, 75, 70, 70, 65, 61, 59, 58, 57, 56, 53, 52, 51, 40, 40, 35, 29, 20, 11],
+                backgroundColor: [
+                'rgba(255, 99, 132)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)',
+                'rgba(255, 159, 64)'
+                ]
+            }]
+        };
+        let ctx_bar = some_chart_bar.getContext('2d');
+        var chart_new_bar = new Chart(ctx_bar, {
+            type: 'bar',
+            data: data,
+            options: {
+                aspectRatio: 1.4,
+                indexAxis: 'y',
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+                // scales: {
+                //     x: {
+                //         beginAtZero: true
+                //     }
+                // }
+            }
+        });
     });
 
 </script>
@@ -202,6 +255,16 @@
 <body class="body2">
 	<Header />
 	<div style="height: 50px;"></div>
+
+    <div id="tweet-cont" style="width: 640px; margin:0 auto;">
+
+        <div class="chart" id="chartpng">
+            <div class="chart-cont" style="position: relative; height:400px">
+                <canvas bind:this={some_chart_bar} id="myChart"></canvas>
+            </div>
+        </div>
+
+    </div>
 
     <div id="tweet-cont" style="width: 640px; margin:0 auto;">
 
