@@ -3,7 +3,7 @@
     export async function load({ params, fetch }) {
         let content_list = await fetch(`${assets}/content_list.json`).then( res => res.json());
         return {
-                props: { content_list }
+                props: { content_list, base }
             }
     }
 </script>
@@ -36,45 +36,75 @@
             return '/team/'
         }
     }
+
+    import Select from 'svelte-select';
+    let url_lu = {
+        '': 'See all',
+        'Arsenal': 'Arsenal',
+        'Chelsea': 'Chelsea',
+        'Liverpool': 'Liverpool',
+        'City': 'Manchester City',
+        'United': 'Manchester Utd',
+        'Tottenham': 'Tottenham'
+    }
+    const items = [
+        {index: 0, value: '', label: 'See all'},
+        {index: 1, value: 'Arsenal', label: 'Arsenal'},
+        {index: 2, value: 'Chelsea', label: 'Chelsea'},
+        {index: 3, value: 'Liverpool', label: 'Liverpool'},
+        {index: 4, value: 'City', label: 'Manchester City'},
+        {index: 5, value: 'United', label: 'Manchester Utd'},
+        {index: 6, value: 'Tottenham', label: 'Tottenham'}
+    ];
+    let selected_team
+    let team_filtered = url_lu[$page.url.hash.slice(1)]
+    $: if (selected_team) {
+        window.location.hash = selected_team.value;
+        team_filtered = selected_team.label
+    }
+    $: console.log("team_filtered", team_filtered)
 </script>
 
 <body class="body2">
     <Header />
-
     <h2>
         Premier League<br>Statistics
     </h2>
+    <div style="margin-top: 75px; margin-left: 50px; width: 250px;">
+        <Select bind:value={selected_team} {items} placeholder={"Choose a team..."}></Select>
+    </div>
     <div class='grid-container'>
-
         {#each content_list as misc, i}
-            <a sveltekit:prefetch href={ isOld(misc.date) + teams.find(d => d.name == misc.team)['id'] + '>' + misc.date }>
-                <div class="team-div" class:active={$page.url.pathname === '/'+teams.find(d => d.name == misc.team)['id']}>
-                    <div class="row number">
-                        {addZeros(misc.id+1)}
-                    </div>
-                    <div class="row name">
-                        {misc.team}
-                    </div>
-                    <div class="row text">
-                        <div class='col1'>Opponent</div>
-                        <div>{misc.opponent}</div>
-                    </div>
-                    <div class="row text">
-                        <div class='col1'>Result</div>
+            {#if (misc.team == team_filtered) | ( team_filtered == 'See all')}
+                <a sveltekit:prefetch href={ isOld(misc.date) + teams.find(d => d.name == misc.team)['id'] + '>' + misc.date }>
+                    <div class="team-div" class:active={$page.url.pathname === '/'+teams.find(d => d.name == misc.team)['id']}>
+                        <div class="row number">
+                            {addZeros(misc.id+1)}
+                        </div>
+                        <div class="row name">
+                            {misc.team}
+                        </div>
+                        <div class="row text">
+                            <div class='col1'>Opponent</div>
+                            <div>{misc.opponent}</div>
+                        </div>
+                        <div class="row text">
+                            <div class='col1'>Result</div>
 
-                        {#if misc.home=='home'}
-                            <div><strong>{misc.result[0]}</strong><span style="color: #686868;">-{misc.result[1]}</span></div>
-                        {:else}
-                            <div><span style="color: #686868;">{misc.result[0]}-</span><strong>{misc.result[1]}</strong></div>
-                        {/if}
+                            {#if misc.home=='home'}
+                                <div><strong>{misc.result[0]}</strong><span style="color: #686868;">-{misc.result[1]}</span></div>
+                            {:else}
+                                <div><span style="color: #686868;">{misc.result[0]}-</span><strong>{misc.result[1]}</strong></div>
+                            {/if}
 
+                        </div>
+                        <div class="row text last">
+                            <div class='col1'>Date</div>
+                            <div>{misc.date}</div>
+                        </div>
                     </div>
-                    <div class="row text last">
-                        <div class='col1'>Date</div>
-                        <div>{misc.date}</div>
-                    </div>
-                </div>
-            </a>
+                </a>
+            {/if}
         {/each}
 
     </div>
@@ -82,6 +112,10 @@
 
 
 <style>
+    :global(.selectContainer) {
+        background: none !important;
+        border-color: black !important;
+    }
     .body2 {
         font-family: system-ui;
         color: #000;

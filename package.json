@@ -26,6 +26,7 @@
 		"d3-shape": "^3.1.0",
 		"layercake": "^7.0.0",
 		"svelte-chartjs": "^2.0.1",
+		"svelte-select": "^4.4.7",
 		"svelte-share-buttons-component": "^1.5.0"
 	}
 }
